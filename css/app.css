@@ -1,0 +1,78 @@
+@font-face{
+    font-family: 'Fira Code';
+    src: url('../fonts/eot/FiraCode-Light.eot');
+    src: url('../fonts/eot/FiraCode-Light.eot') format('embedded-opentype'),
+         url('../fonts/woff2/FiraCode-Light.woff2') format('woff2'),
+         url('../fonts/woff/FiraCode-Light.woff') format('woff'),
+         url('../fonts/ttf/FiraCode-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    overflow: hidden;
+}
+
+#area-51 {
+    display: none;
+}
+
+nav {
+    width: 240px;
+    height: 100vh;
+    float: left;
+    background: #004a80; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00aef0, #004a80); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00aef0, #004a80); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00aef0, #004a80); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00aef0, #004a80); /* Standard syntax */
+}
+
+canvas {
+
+}
+
+main {
+    float: left;
+    position: relative;
+    background: #eee;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+ul {
+    position: absolute;
+    top: 150px;
+    left: 80px;
+    font: normal 13px "Fira Code";
+    list-style: none;
+}
+
+li {
+    margin-bottom: 40px;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+article {
+    padding: 10%;
+    font-family: "Fira Code";
+}
+
+article p {
+    line-height: 2;
+}
+
+article a {
+    color: #000;
+    text-decoration: none;
+    font-style: italic;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
