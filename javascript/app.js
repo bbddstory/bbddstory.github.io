@@ -74,11 +74,15 @@ $(function() {
 
     function initNavi(){
         $('#navi a').on('click', function(e){
-            $('main').load('views/' + e.target.hash.replace('#', '') + '.html')
+            $('main').load('views/' + e.target.hash.replace('#', '') + '.html');
         })
     }
 
     function routing(){
-        $('main').load('views/' + location.hash.replace('#', '') + '.html')
+        if(location.hash){
+            $('main').load('views/' + location.hash.replace('#', '') + '.html');
+        }else {
+            $('main').load('views/moi.html');
+        }
     }
 });
