@@ -35,13 +35,17 @@ $(function() {
     function draw(){
         ctxNav.clearRect(0, 0, canvasNav.width, canvasNav.height);
 
+        // Bottom plate
+        ctxNav.globalAlpha = 0.1;
+        ctxNav.drawImage(imgPlate, 100, window.innerHeight - 98);
+
         // Guide line
-        var guideLine = ctxNav.createLinearGradient(118, 129, 122, window.innerHeight - 98);
+        var guideLine = ctxNav.createLinearGradient(118, 129, 122, window.innerHeight - 87);
         guideLine.addColorStop(0, '#ebebeb');
         guideLine.addColorStop(1, '#00426e');
         ctxNav.fillStyle = guideLine;
-        ctxNav.globalAlpha = 0.6;
-        ctxNav.fillRect(118, 129, 2, window.innerHeight - 129 - 98);
+        ctxNav.globalAlpha = 0.7;
+        ctxNav.fillRect(118, 129, 2, window.innerHeight - 129 - 87);
 
         // Buoy
         ctxNav.globalAlpha = 1;
@@ -66,10 +70,6 @@ $(function() {
                 diverY = 150;
             }
         }
-
-        // Bottom plate
-        ctxNav.globalAlpha = 0.1;
-        ctxNav.drawImage(imgPlate, 100, window.innerHeight - 98);
     }
 
     function initNavi(){
