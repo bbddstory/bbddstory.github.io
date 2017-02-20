@@ -84,6 +84,7 @@ article h1 {
 
 article p {
     line-height: 2;
+    margin-bottom: 25px;
 }
 
 article a {
@@ -94,4 +95,51 @@ article a {
 
 article a:hover {
     text-decoration: underline;
+}
+
+#moi-cap {
+    height: 110px;
+}
+
+#moi-mugshot {
+    width: 110px;
+    height: 100%;
+    float:left;
+    border-radius: 50%;
+    margin-right: 15px;
+    background: url("../images/mugshot.jpg");
+}
+
+#moi-title {
+    float: left;
+    margin-top: 15px;
+}
+
+/* Swiper */
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+.gallery-top {
+    _height: 80%;
+    _width: 100%;
+}
+.gallery-thumbs {
+    height: 120px;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+.gallery-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+.gallery-thumbs .swiper-slide-active {
+    opacity: 1;
 }
