@@ -48,7 +48,7 @@ main {
     background: #eee;
     height: 100vh;
     overflow-y: auto;
-    margin: 5px auto;
+    margin-top: 5px;
 }
 
 ul {
