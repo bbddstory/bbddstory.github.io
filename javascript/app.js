@@ -73,7 +73,10 @@ $(function() {
 
     function initNavi(){
         $('#navi a').on('click', function(e){
-            $('main').load('views/' + e.target.hash.replace('#', '') + '.html');
+            $('main').load('views/' + e.target.hash.replace('#', '') + '.html', function() {
+                $(this).scrollTop(0);
+            });
+
         })
     }
 
