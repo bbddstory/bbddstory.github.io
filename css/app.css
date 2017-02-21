@@ -16,20 +16,19 @@
 
 ::-webkit-scrollbar-thumb {
     background: #acacac;
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-track {
     background: #d7d7d7;
+    border-radius: 3px;
 }
 
 body {
     overflow: hidden;
     scrollbar-face-color: #acacac;
     scrollbar-track-color: #d7d7d7;
-}
-
-#area-51 {
-    display: none;
+    background: #eee;
 }
 
 nav {
@@ -49,6 +48,7 @@ main {
     background: #eee;
     height: 100vh;
     overflow-y: auto;
+    margin: 5px auto;
 }
 
 ul {

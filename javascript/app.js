@@ -27,7 +27,8 @@ $(function() {
     function componentResize(){
         canvasNav.height = window.innerHeight;
         draw();
-        $('main').width($(window).width() - 240);
+        $('main').width($(window).width() - $('nav').width() - 5);
+        $('main').height($(window).height() - 10);
     }
 
     function draw(){
