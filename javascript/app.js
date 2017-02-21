@@ -1,5 +1,5 @@
 /**
- * Created by lli on 14/02/2017.
+ * Created by Leon Li on 14/02/2017.
  */
 $(function() {
     var canvasNav = document.getElementById('canvasNav'), ctxNav = canvasNav.getContext("2d"),
@@ -15,8 +15,6 @@ $(function() {
         initNavi();
         routing();
     });
-
-    // window.document.onload = routing();
 
     window.addEventListener('mousemove', function(e){
         clientY = e.clientY;
