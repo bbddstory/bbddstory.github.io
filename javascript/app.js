@@ -1,13 +1,13 @@
 /**
  * Created by Leon Li on 14/02/2017.
  */
-$(function() {
-    var canvasNav = document.getElementById('canvasNav'), ctxNav = canvasNav.getContext("2d"),
+$(function(){
+    var canvasNav = document.getElementById('canvasNav'), ctxNav = canvasNav.getContext('2d'),
         diverY = 999, clientY = 150,
-        imgBuoy = document.getElementById("imgBuoy"),
-        imgDive = document.getElementById("imgDive"),
-        imgFemaleAscent = document.getElementById("imgFemaleAscent"),
-        imgPlate = document.getElementById("imgPlate");
+        imgBuoy = document.getElementById('imgBuoy'),
+        imgDive = document.getElementById('imgDive'),
+        imgFemaleAscent = document.getElementById('imgFemaleAscent'),
+        imgPlate = document.getElementById('imgPlate');
 
     $(window).on('load', function(){
         componentResize();
@@ -21,14 +21,14 @@ $(function() {
         draw();
     })
 
-    window.addEventListener("resize", componentResize);
+    window.addEventListener('resize', componentResize);
 
     // resize nav canvas to full height
     function componentResize(){
         canvasNav.height = window.innerHeight;
         draw();
-        $('main').width($(window).width() - $('nav').width() - 5);
-        $('main').height($(window).height() - 10);
+        $('main').width($(window).width() - $('nav').width() - 10);
+        $('main').height($(window).height() - 20);
     }
 
     function draw(){
@@ -85,6 +85,15 @@ $(function() {
             $('main').load('views/' + location.hash.replace('#', '') + '.html');
         }else {
             $('main').load('views/moi.html');
+        }
+    }
+
+    function isMobile(){
+        try{
+            document.createEvent("TouchEvent");
+            return true;
+        }catch(e){
+            return false;
         }
     }
 });
