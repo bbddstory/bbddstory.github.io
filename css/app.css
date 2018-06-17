@@ -71,6 +71,15 @@ nav {
     background: linear-gradient(#00aef0, #004a80); /* Standard syntax */
 }
 
+.pi {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    font-size: 18px;
+    color: #808080;
+    cursor: pointer;
+}
+
 main {
     float: left;
     position: relative;
@@ -123,20 +132,19 @@ article a:hover {
 }
 
 #moi-cap {
+    display: flex;
     height: 110px;
 }
 
 #moi-mugshot {
-    width: 110px;
+    width: 109px;
     height: 100%;
-    float:left;
     border-radius: 50%;
     margin-right: 15px;
     background: url("../images/mugshot.jpg");
 }
 
 #moi-title {
-    float: left;
     margin-top: 15px;
 }
 
