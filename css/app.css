@@ -32,7 +32,7 @@ body {
 }
 
 nav {
-    width: 240px;
+    width: 250px;
     height: 100vh;
     float: left;
     background: #004a80; /* For browsers that do not support gradients */
@@ -47,8 +47,14 @@ nav {
     bottom: 10px;
     left: 15px;
     font-size: 18px;
-    color: #808080;
+    color: #fff;
+    opacity: .3;
     cursor: pointer;
+    /* font-family: Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+.pi-title {
+    /* font-family: Calibri, 'Trebuchet MS', sans-serif; */
 }
 
 main {
@@ -62,14 +68,14 @@ main {
 
 ul {
     position: absolute;
-    top: 150px;
-    left: 80px;
+    top: 160px;
+    left: 53px;
     font: normal 13px "Fira Code";
     list-style: none;
 }
 
-li {
-    margin-bottom: 30px;
+nav ul li {
+    margin-bottom: 40px;
 }
 
 nav a {
@@ -78,8 +84,13 @@ nav a {
     color: #fff;
 }
 
+nav a span {
+    /* color: #fff; */
+    opacity: .5;
+}
+
 article {
-    padding: 10%;
+    padding: 9% 10%;
     font-family: "Fira Code";
 }
 
