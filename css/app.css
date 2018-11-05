@@ -69,8 +69,8 @@ main {
 ul {
     position: absolute;
     top: 160px;
-    left: 53px;
-    font: normal 13px "Fira Code";
+    left: 50px;
+    font: normal 14px "Fira Code";
     list-style: none;
 }
 
@@ -90,7 +90,7 @@ nav a span {
 }
 
 article {
-    padding: 9% 10%;
+    padding: 10%;
     font-family: "Fira Code";
 }
 
@@ -189,4 +189,10 @@ article a:hover {
     background-size: cover;
     background-position: center;
     cursor: zoom-out;
+}
+
+footer {
+    margin-top: 60px;
+    line-height: 1.6;
+    font-size: 14px;
 }
