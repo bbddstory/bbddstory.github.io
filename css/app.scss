@@ -62,7 +62,7 @@ main {
     margin-top: 10px;
 }
 
-nav ul {
+#navi {
     position: absolute;
     top: 160px;
     left: 90px;
@@ -75,7 +75,7 @@ nav ul li {
 }
 
 nav a {
-    padding: 10px;
+    // padding: 10px;
     text-decoration: none;
     color: #fff;
 }
@@ -83,6 +83,13 @@ nav a {
 nav a span {
     /* color: #fff; */
     opacity: .5;
+}
+
+#wr {
+    position: absolute;
+    bottom: 50px;
+    left: 82px;
+    font: normal 14px "Fira Code";
 }
 
 ul {
@@ -121,14 +128,13 @@ article a:hover {
 #moi-cap {
     display: flex;
     height: 110px;
-}
 
-#moi-mugshot {
-    width: 109px;
-    height: 109px;
-    border-radius: 50%;
-    margin-right: 15px;
-    background: url("../images/mugshot.jpg");
+    img {
+        // width: 109px;
+        // height: 109px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
 }
 
 .separator {
@@ -208,7 +214,6 @@ article a:hover {
 }
 
 footer {
-    // margin-top: 60px;
-    line-height: 1.6;
+    line-height: 2;
     font-size: 14px;
 }

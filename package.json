@@ -10,6 +10,9 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.10.0"
+  },
   "dependencies": {}
 }

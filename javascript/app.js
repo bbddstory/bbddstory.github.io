@@ -59,18 +59,18 @@ $(function() {
         ctxNav.globalAlpha = 1 - (clientY / window.innerHeight).toFixed(1);
         if(clientY > diverY) {
             if(clientY < window.innerHeight - 220) {
-                ctxNav.drawImage(imgDive, 50, clientY);
+                ctxNav.drawImage(imgDive, 40, clientY);
                 diverY = clientY - 1;
             } else {
-                ctxNav.drawImage(imgDive, 50, window.innerHeight - 220);
+                ctxNav.drawImage(imgDive, 40, window.innerHeight - 220);
                 diverY = window.innerHeight - 220;
             }
         } else {
             if(clientY > 150) {
-                ctxNav.drawImage(imgFemaleAscent, 60, clientY);
+                ctxNav.drawImage(imgFemaleAscent, 50, clientY);
                 diverY = clientY;
             } else {
-                ctxNav.drawImage(imgFemaleAscent, 60, 150);
+                ctxNav.drawImage(imgFemaleAscent, 50, 150);
                 diverY = 150;
             }
         }
