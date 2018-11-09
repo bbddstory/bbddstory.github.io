@@ -29,6 +29,8 @@ body {
     scrollbar-face-color: #acacac;
     scrollbar-track-color: #d7d7d7;
     background: #eee;
+
+
 }
 
 nav {
@@ -78,6 +80,18 @@ nav a {
     // padding: 10px;
     text-decoration: none;
     color: #fff;
+}
+
+a[target] {
+    font-weight: bold;
+}
+
+.the-net-posters {
+    img {
+        height: 268px;
+        object-fit: contain;
+        margin-bottom: 5px;
+    }
 }
 
 nav a span {
