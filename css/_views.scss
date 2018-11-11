@@ -1,14 +1,48 @@
 #moi-header {
-  display: flex;
-  height: 110px;
   margin-bottom: 50px;
-
+  
   img {
-      border-radius: 50%;
-      margin-right: 15px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 15px 15px 0;
   }
 
-  #moi-title {
-      margin-top: 15px;
+  h3 {
+    margin-bottom: 0;
+  }
+
+  @media only screen and (min-width: 880px) {
+    display: flex;
+    align-items: center;
+    
+    // img {
+    //   margin-right: 15px;
+    // }
+  }
+  
+  @media only screen and (min-width: 715px) and (max-width: 879px) {
+    // img {
+    //   margin-bottom: 15px;
+    // }
+  }
+
+  @media only screen and (max-width: 714px) and (min-width: 0px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // text-align: center;
+
+    img {
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 1.6em;
+    }
+
+    h3 {
+      font-size: 1em;
+    }
   }
 }
