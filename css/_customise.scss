@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../fonts/eot/FiraCode-Light.eot');
+  src: url('../fonts/eot/FiraCode-Light.eot') format('embedded-opentype'),
+       url('../fonts/woff2/FiraCode-Light.woff2') format('woff2'),
+       url('../fonts/woff/FiraCode-Light.woff') format('woff'),
+       url('../fonts/ttf/FiraCode-Light.ttf') format('truetype');
+}
+
+::-webkit-scrollbar {
+  width: 0.3em;
+  height: 0.3em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #acacac;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d7d7d7;
+  border-radius: 3px;
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass -w css -o css --output-style compressed",
-    "sync": "browser-sync start --server --files \"./**/*.*\""
+    "start": "browser-sync start --server --files \"./**/*.*\""
   },
   "author": "",
   "license": "ISC",

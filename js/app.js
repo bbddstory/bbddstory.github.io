@@ -23,7 +23,7 @@ $(function() {
 
     window.addEventListener('resize', componentResize);
 
-    $('.pi').on('click', function() {
+    $('#pi-symbol').on('click', function() {
         location.hash = 'pi';
         routing();
     })
@@ -51,26 +51,32 @@ $(function() {
         ctxNav.globalAlpha = 0.7;
         ctxNav.fillRect(123, 129, 2, window.innerHeight - 129 - 87);
 
-        // Buoy
+        // My mark
+        ctxNav.beginPath();
+        ctxNav.arc(124, 324, 5, 0, 2 * Math.PI, false);
+        ctxNav.fillStyle = '#ff9900';
         ctxNav.globalAlpha = 1;
+        ctxNav.fill();
+
+        // Buoy
         ctxNav.drawImage(imgBuoy, 63, 30);
 
         // Diver
         ctxNav.globalAlpha = 1 - (clientY / window.innerHeight).toFixed(1);
         if(clientY > diverY) {
             if(clientY < window.innerHeight - 220) {
-                ctxNav.drawImage(imgDive, 40, clientY);
+                ctxNav.drawImage(imgDive, 30, clientY);
                 diverY = clientY - 1;
             } else {
-                ctxNav.drawImage(imgDive, 40, window.innerHeight - 220);
+                ctxNav.drawImage(imgDive, 30, window.innerHeight - 220);
                 diverY = window.innerHeight - 220;
             }
         } else {
             if(clientY > 150) {
-                ctxNav.drawImage(imgFemaleAscent, 50, clientY);
+                ctxNav.drawImage(imgFemaleAscent, 40, clientY);
                 diverY = clientY;
             } else {
-                ctxNav.drawImage(imgFemaleAscent, 50, 150);
+                ctxNav.drawImage(imgFemaleAscent, 40, 150);
                 diverY = 150;
             }
         }

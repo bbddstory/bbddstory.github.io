@@ -5,38 +5,33 @@
     <meta name="google-site-verification" content="h_UJGKgFkCd6PHtThOsETygujb2g9q5ku4hR0n1i2K0" />
     <title>Forever Junior Dev</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div style="display:none;">
+    <div id="nav-el">
         <img id="imgBuoy" src="images/buoy.png">
-        <img id="imgDive" src="images/diver_dive.png">
-        <img id="imgFemaleAscent" src="images/diver_female_ascent.png">
+        <img id="imgDive" src="images/diver_descent.png">
+        <img id="imgFemaleAscent" src="images/diver_ascent.png">
         <img id="imgPlate" src="images/bottom_plate.png">
     </div>
     <nav>
         <canvas id="canvasNav" width="250" height="0">
             Your browser does not support the HTML5 canvas tag.
         </canvas>
-        <ul id="navi">
-            <li><a href="#moi"><span>10m</span>&nbsp;&nbsp;Moi</a></li>
-            <li><a href="#projects"><span>20m</span>&nbsp;&nbsp;Projects</a></li>
-            <li><a href="#dive"><span>30m</span>&nbsp;&nbsp;Dive! Dive!</a></li>
-            <li><a href="#stars"><span>40m</span>&nbsp;&nbsp;The Stars</a></li>
-            <li><a href="#life"><span>50m</span>&nbsp;&nbsp;C'est la vie</a></li>
+        <ul id="nav-up">
+            <li><a href="#moi"><span>-10m</span>Moi</a></li>
+            <li><a href="#projects"><span>-20m</span>Projects</a></li>
+            <li><a href="#dive"><span>-30m</span>Dive! Dive!</a></li>
+            <li><a href="#stars"><span>-40m</span>The Stars</a></li>
+            <li><a href="#life"><span>-50m</span>C'est la vie</a></li>
         </ul>
-        <ul id="wr">
-            <li><a href="#records"><span>129m</span>&nbsp;&nbsp;WR 2016</a></li>
+        <ul id="nav-down">
+            <li><a href="#records"><span>-130m</span>WR 2018</a></li>
         </ul>
-        <span class="pi">π</span>
+        <span id="pi-symbol">π</span>
     </nav>
-    <main id="main"></main>
-    <div id="enlarge-bg">
-        <div id="enlarge"></div>
-    </div>
-    <script src="javascript/jquery-1.12.4.min.js"></script>
-    <!-- <script src="javascript/swiper.min.js"></script> -->
-    <script src="javascript/app.js"></script>
+    <main></main>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
