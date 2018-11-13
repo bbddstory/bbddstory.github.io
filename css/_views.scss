@@ -15,23 +15,12 @@
   @media only screen and (min-width: 880px) {
     display: flex;
     align-items: center;
-    
-    // img {
-    //   margin-right: 15px;
-    // }
   }
   
-  @media only screen and (min-width: 715px) and (max-width: 879px) {
-    // img {
-    //   margin-bottom: 15px;
-    // }
-  }
-
-  @media only screen and (max-width: 714px) and (min-width: 0px) {
+  @media only screen and (max-width: 714px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // text-align: center;
 
     img {
       margin-bottom: 30px;
@@ -44,5 +33,116 @@
     h3 {
       font-size: 1em;
     }
+  }
+}
+
+.moi-links {
+  li::before {
+    content: "-";
+    margin-right: 10px;
+  }
+}
+
+#nav-el {
+  display: none;
+}
+
+#mobile-header {
+  position: relative;
+  display: none;
+  height: 200px;
+  background: red;
+
+  div {
+    position: absolute;
+    top: 50px;
+    left: 10%;
+    width: 80%;
+
+    h4 {
+      line-height: 1.4;
+      color: #f2f2f2;
+    }
+
+    @media only screen and (min-width: 360px) {
+      h1 {
+        font-size: 1.6em;
+        margin-bottom: 35px;
+      }
+    }
+
+    @media only screen and (min-width: 324px)  and (max-width: 359px) {
+      h1 {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+      }
+      h4 {
+        font-size: .9em;
+      }
+    }
+
+    @media only screen and (max-width: 323px) {
+      h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+      h4 {
+        font-size: .8em;
+      }
+    }
+  }
+}
+
+#mobile-footer {
+  display: none;
+  height: 300px;
+  background: red;
+}
+
+#nav-desktop {
+  width: 250px;
+  height: 100vh;
+  background: #004a80; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#00aef0, #004a80); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#00aef0, #004a80); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#00aef0, #004a80); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#00aef0, #004a80); /* Standard syntax */
+
+  li {
+    margin-bottom: 40px;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      span {
+        opacity: .4;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  #nav-up {
+    position: absolute;
+    top: 160px;
+    left: 80px;
+    font-size: 14px;
+  }
+  
+  #nav-down {
+    position: absolute;
+    bottom: 50px;
+    left: 72px;
+    font-size: 14px;
+  }
+
+  #pi-symbol {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    font-size: 18px;
+    color: #fff;
+    opacity: .3;
+    cursor: pointer;
   }
 }

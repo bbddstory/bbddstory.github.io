@@ -10,13 +10,14 @@
 </head>
 <body>
     <div id="nav-el">
-        <img id="imgBuoy" src="images/buoy.png">
-        <img id="imgDive" src="images/diver_descent.png">
-        <img id="imgFemaleAscent" src="images/diver_ascent.png">
-        <img id="imgPlate" src="images/bottom_plate.png">
+        <img id="img-buoy" src="images/buoy.png">
+        <img id="img-buoy-mobile" src="images/buoy_mobile.png">
+        <img id="img-descent" src="images/diver_descent.png">
+        <img id="img-ascent" src="images/diver_ascent.png">
+        <img id="img-bottom-plate" src="images/bottom_plate.png">
     </div>
-    <nav>
-        <canvas id="canvasNav" width="250" height="0">
+    <nav id="nav-desktop">
+        <canvas id="desktop-nav-canvas">
             Your browser does not support the HTML5 canvas tag.
         </canvas>
         <ul id="nav-up">
@@ -31,7 +32,23 @@
         </ul>
         <span id="pi-symbol">π</span>
     </nav>
-    <main></main>
+    <main>
+        <header id="mobile-header">
+            <div>
+                <h1>Forever Junior Dev</h1>
+                <h4>Full Process<br>Front-end Developer</h4>
+            </div>
+            <canvas id="mobile-header-canvas">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </header>
+        <article></article>
+        <footer id="mobile-footer">
+            <canvas id="mobile-footer-canvas">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </footer>
+    </main>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/app.js"></script>
 </body>

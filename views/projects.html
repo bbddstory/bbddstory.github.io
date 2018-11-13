@@ -1,38 +1,36 @@
-<article>
-    <h1>Projects</h1>
-    <h3>Things I've been working on at my leisure.</h3>
-    <br>
-    <h3><a href="http://pzone.foreverjuniordev.com" target="_blank">PhantomZone</a></h3>
-    <a href="http://pzone.foreverjuniordev.com" target="_blank"><img src="../images/pz_logo.png" alt="PhantomZone Logo"></a>
-    <p>
-        This is a portal to my home NAS, which stores thousands of movies, TV series, documentaries and so forth.
-        As a video collector, I use NAS for storage as do most people. The collection has gotten so large that
-        it exceeded my memory bank, and became impossible to govern by hand. Of course, there're many existing
-        options out there for managing files. But why not make something of my own?
-    </p>
-    <p>
-        The first problem here is how to transfer the huge catalog on the hard disk into a database. My solution was
-        to use Node.js to systematically read, filter and rename each and every file and folder, then output them
-        to respective tables according to category.
-    </p>
-    <p>
-        The next question is what kind of database to use. I thought about using a real-time database, like firebase
-        from Google, for speed, easy access and low overhead. However, the biggest limitation of real-time databases
-        is that they don't support full text search out of the box. You either need to do something unpractically slow
-        and complicated yourself or employ a costly third party solution, which is not really doable for me. Yet,
-        this feature is vital for file management. So I had no choice but to ditch firebase, and use MySQL instead.
-    </p>
-    <p>
-        So the entire data flow is as follow. A Node.js process is constantly running on the NAS for monitoring
-        file changes. Once a new file is added, it will be processed automatically, and uploaded to the online MySQL
-        database. Another set of Node.js processes are running on the server, acting as back-end for accessing the
-        data. The front-end part was made using React, and hosted on the same server with a differnt port. Everything
-        is deployed on the same hosting service.
-    </p>
-    <p>
-        If you want to have a look inside, you can log in using demo/demo without write privileges.
-    </p>
-    <p>
-        P.S. The mobile version of this site will be made using Vue.js, its development will start soon.
-    </p>
-</article>
+<h1>Projects</h1>
+<h3>Things I've been working on at my leisure.</h3>
+<br>
+<h3><a href="http://pzone.foreverjuniordev.com" target="_blank">PhantomZone</a></h3>
+<a href="http://pzone.foreverjuniordev.com" target="_blank"><img src="../images/pz_logo.png" alt="PhantomZone Logo"></a>
+<p>
+    This is a portal to my home NAS, which stores thousands of movies, TV series, documentaries and so forth.
+    As a video collector, I use NAS for storage as do most people. The collection has gotten so large that
+    it exceeded my memory bank, and became impossible to govern by hand. Of course, there're many existing
+    options out there for managing files. But why not make something of my own?
+</p>
+<p>
+    The first problem here is how to transfer the huge catalog on the hard disk into a database. My solution was
+    to use Node.js to systematically read, filter and rename each and every file and folder, then output them
+    to respective tables according to category.
+</p>
+<p>
+    The next question is what kind of database to use. I thought about using a real-time database, like firebase
+    from Google, for speed, easy access and low overhead. However, the biggest limitation of real-time databases
+    is that they don't support full text search out of the box. You either need to do something unpractically slow
+    and complicated yourself or employ a costly third party solution, which is not really doable for me. Yet,
+    this feature is vital for file management. So I had no choice but to ditch firebase, and use MySQL instead.
+</p>
+<p>
+    So the entire data flow is as follow. A Node.js process is constantly running on the NAS for monitoring
+    file changes. Once a new file is added, it will be processed automatically, and uploaded to the online MySQL
+    database. Another set of Node.js processes are running on the server, acting as back-end for accessing the
+    data. The front-end part was made using React, and hosted on the same server with a differnt port. Everything
+    is deployed on the same hosting service.
+</p>
+<p>
+    If you want to have a look inside, you can log in using demo/demo without write privileges.
+</p>
+<p>
+    P.S. The mobile version of this site will be made using Vue.js, its development will start soon.
+</p>

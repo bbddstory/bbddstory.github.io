@@ -1,0 +1,58 @@
+@media only screen and (max-width: 768px) {
+  #mobile-header, #mobile-footer {
+    background: #004a80 !important; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00aef0, #004a80) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00aef0, #004a80) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00aef0, #004a80) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00aef0, #004a80) !important; /* Standard syntax */
+  }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 768px) {
+  .gallery {
+      img {
+          height: 250px !important;
+          width: calc(100vw - 250px - 25% - 15px);
+          object-fit: contain !important;
+      }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  ::-webkit-scrollbar {
+      display: none;
+  }
+  body {
+      flex-direction: column;
+
+      #nav-desktop {
+          display: none;
+      }
+      main {
+          width: 100vw !important;
+          height: 100vh !important;
+          margin: 0 !important;
+  
+          #mobile-header, #mobile-footer {
+              display: block;
+          }
+  
+          .gallery {
+              img {
+                  height: 200px !important;
+                  width: calc(100vw - 25%);
+              }
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .gallery {
+      img {
+          height: 250px !important;
+          width: calc(100vw - 25%);
+          object-fit: cover !important;
+      }
+  }
+}
