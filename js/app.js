@@ -44,18 +44,18 @@ $(function() {
 
     // Buoy
     mobileHeaderCtx.clearRect(0, 0, window.innerWidth, 200);
-    mobileHeaderCtx.drawImage(imgBuoyMobile, (window.innerWidth - window.innerWidth * 0.205) - 43, 95);
+    mobileHeaderCtx.drawImage(imgBuoyMobile, (window.innerWidth - window.innerWidth * 0.205) - 43, 115);
 
     // Diver
-    mobileHeaderCtx.drawImage(imgAscentLeft, (window.innerWidth - window.innerWidth * 0.17), 185);
+    mobileHeaderCtx.drawImage(imgAscentLeft, (window.innerWidth - window.innerWidth * 0.17), 205);
 
     // Lanyard
-    var guideLine = mobileHeaderCtx.createLinearGradient(0, 176, 0, 200);
+    var guideLine = mobileHeaderCtx.createLinearGradient(0, 196, 0, 220);
     guideLine.addColorStop(0, '#ebebeb');
     guideLine.addColorStop(1, '#00426e');
     mobileHeaderCtx.fillStyle = guideLine;
     mobileHeaderCtx.globalAlpha = 0.7;
-    mobileHeaderCtx.fillRect((window.innerWidth - window.innerWidth * 0.205), 176, 2, 24);
+    mobileHeaderCtx.fillRect((window.innerWidth - window.innerWidth * 0.205), 196, 2, 24);
 }
 
 function drawMobileFooter() {
@@ -67,14 +67,13 @@ function drawMobileFooter() {
     mobileFooterCanvas.width = window.innerWidth;
     mobileFooterCanvas.height = 380;
     
-    
     // Diver
     mobileFooterCtx.globalAlpha = 0.3;
-    mobileFooterCtx.drawImage(imgDescent, (window.innerWidth - window.innerWidth * 0.205) + 10, 155);
+    mobileFooterCtx.drawImage(imgDescent, (window.innerWidth - window.innerWidth * 0.205) + 10, 185);
     
     // Bottom plate
     mobileFooterCtx.globalAlpha = 0.1;
-    mobileFooterCtx.drawImage(imgBottomPlate, (window.innerWidth - window.innerWidth * 0.205) - 18, 272);
+    mobileFooterCtx.drawImage(imgBottomPlate, (window.innerWidth - window.innerWidth * 0.205) - 18, 302);
 
     // Lanyard
     var guideLine = mobileFooterCtx.createLinearGradient(0, 0, 0, 150);
@@ -82,7 +81,14 @@ function drawMobileFooter() {
     guideLine.addColorStop(1, '#00426e');
     mobileFooterCtx.fillStyle = guideLine;
     mobileFooterCtx.globalAlpha = 0.5;
-    mobileFooterCtx.fillRect((window.innerWidth - window.innerWidth * 0.205), 0, 2, 282);
+    mobileFooterCtx.fillRect((window.innerWidth - window.innerWidth * 0.205), 0, 2, 312);
+
+    // My mark
+    mobileFooterCtx.beginPath();
+    mobileFooterCtx.arc((window.innerWidth - window.innerWidth * 0.205) + 1, 165, 5, 0, 2 * Math.PI, false);
+    mobileFooterCtx.fillStyle = '#ff9900';
+    mobileFooterCtx.globalAlpha = 1;
+    mobileFooterCtx.fill();
   }
 
   function drawDesktop() {
