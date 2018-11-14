@@ -49,12 +49,3 @@
     }
   }
 }
-
-@media only screen and (max-width: 390px) {
-  .gallery {
-    img {
-      height: 250px !important;
-      width: calc(100vw - 25%);
-    }
-  }
-}
