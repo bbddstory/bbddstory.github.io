@@ -28,20 +28,61 @@ $(function() {
     if(window.innerWidth > 520) {
         drawDesktop();
     } else {
-        drawMobile();
+        drawMobileHeader();
+        drawMobileFooter();
     }
   }
 
-  function drawMobile() {
+  function drawMobileHeader() {
     var mobileHeaderCanvas = document.getElementById('mobile-header-canvas');
     var mobileHeaderCtx = mobileHeaderCanvas.getContext('2d');
+    var imgAscentLeft = document.getElementById('img-ascent-left');
     var imgBuoyMobile = document.getElementById('img-buoy-mobile');
 
     mobileHeaderCanvas.width = window.innerWidth;
-    mobileHeaderCanvas.height = 200;
+    mobileHeaderCanvas.height = 350;
 
+    // Buoy
     mobileHeaderCtx.clearRect(0, 0, window.innerWidth, 200);
-    mobileHeaderCtx.drawImage(imgBuoyMobile, (window.innerWidth - window.innerWidth*0.32), 95);
+    mobileHeaderCtx.drawImage(imgBuoyMobile, (window.innerWidth - window.innerWidth * 0.205) - 43, 95);
+
+    // Diver
+    mobileHeaderCtx.drawImage(imgAscentLeft, (window.innerWidth - window.innerWidth * 0.17), 185);
+
+    // Lanyard
+    var guideLine = mobileHeaderCtx.createLinearGradient(0, 176, 0, 200);
+    guideLine.addColorStop(0, '#ebebeb');
+    guideLine.addColorStop(1, '#00426e');
+    mobileHeaderCtx.fillStyle = guideLine;
+    mobileHeaderCtx.globalAlpha = 0.7;
+    mobileHeaderCtx.fillRect((window.innerWidth - window.innerWidth * 0.205), 176, 2, 24);
+}
+
+function drawMobileFooter() {
+    var mobileFooterCanvas = document.getElementById('mobile-footer-canvas');
+    var mobileFooterCtx = mobileFooterCanvas.getContext('2d');
+    var imgDescent = document.getElementById('img-descent');
+    var imgBottomPlate = document.getElementById('img-bottom-plate');
+
+    mobileFooterCanvas.width = window.innerWidth;
+    mobileFooterCanvas.height = 380;
+    
+    
+    // Diver
+    mobileFooterCtx.globalAlpha = 0.3;
+    mobileFooterCtx.drawImage(imgDescent, (window.innerWidth - window.innerWidth * 0.205) + 10, 155);
+    
+    // Bottom plate
+    mobileFooterCtx.globalAlpha = 0.1;
+    mobileFooterCtx.drawImage(imgBottomPlate, (window.innerWidth - window.innerWidth * 0.205) - 18, 272);
+
+    // Lanyard
+    var guideLine = mobileFooterCtx.createLinearGradient(0, 0, 0, 150);
+    guideLine.addColorStop(0, '#ebebeb');
+    guideLine.addColorStop(1, '#00426e');
+    mobileFooterCtx.fillStyle = guideLine;
+    mobileFooterCtx.globalAlpha = 0.5;
+    mobileFooterCtx.fillRect((window.innerWidth - window.innerWidth * 0.205), 0, 2, 282);
   }
 
   function drawDesktop() {
@@ -62,7 +103,7 @@ $(function() {
     desktopNavCtx.drawImage(imgBottomPlate, 104, window.innerHeight - 98);
 
     // Lanyard
-    var guideLine = desktopNavCtx.createLinearGradient(118, 129, 122, window.innerHeight - 87);
+    var guideLine = desktopNavCtx.createLinearGradient(0, 129, 0, window.innerHeight - 87);
     guideLine.addColorStop(0, '#ebebeb');
     guideLine.addColorStop(1, '#00426e');
     desktopNavCtx.fillStyle = guideLine;
@@ -91,19 +132,20 @@ $(function() {
       }
     } else {
       if(clientY > 150) {
-        desktopNavCtx.drawImage(imgAscent, 40, clientY);
+        desktopNavCtx.drawImage(imgAscent, 40, clientY); // Low point of ascending diver
         diverY = clientY;
       } else {
-        desktopNavCtx.drawImage(imgAscent, 40, 150);
+        desktopNavCtx.drawImage(imgAscent, 40, 130); // High point of ascending diver
         diverY = 150;
       }
     }
   }
 
   function initNav() {
-    $('nav ul li a').on('click', function(e) {
+    $('nav a, footer a').on('click', function(e) {
       $('main article').load('views/' + e.target.hash.replace('#', '') + '.html', function() {
-        $(this).scrollTop(0);
+        // $('main').scrollTop(0); // Back to top w/o animation
+        $('main').stop().animate({ scrollTop : 0 }, 500); // Animated back to top scroll
       });
     })
   }

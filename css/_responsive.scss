@@ -43,6 +43,10 @@
                   width: calc(100vw - 25%);
               }
           }
+
+          article {
+            padding-top: 25% !important;
+          }
       }
   }
 }
