@@ -84,9 +84,10 @@
 
   #pi-symbol {
     position: absolute;
-    bottom: 10px;
+    bottom: 12px;
     left: 15px;
     font-size: 18px;
+    text-decoration: none;
     color: #f2f2f2;
     opacity: .3;
     cursor: pointer;
@@ -174,5 +175,15 @@
       text-align: right;
       margin-bottom: 31px;
     }
+  }
+
+  #pi-symbol {
+    position: absolute;
+    bottom: 15px;
+    right: 18px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #f2f2f2;
+    opacity: .3;
   }
 }

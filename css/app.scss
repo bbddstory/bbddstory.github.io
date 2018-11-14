@@ -69,8 +69,8 @@ body {
       .gallery {
         img {
           height: 268px;
-          object-fit: contain;
           margin-bottom: 5px;
+          object-fit: cover;
         }
       }
 

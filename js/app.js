@@ -19,11 +19,6 @@ $(function() {
     drawDesktop();
   })
 
-  $('#pi-symbol').on('click', function() {
-    location.hash = 'pi';
-    routing();
-  })
-
   function componentResize(){
     if(window.innerWidth > 520) {
         drawDesktop();
@@ -56,9 +51,9 @@ $(function() {
     mobileHeaderCtx.fillStyle = guideLine;
     mobileHeaderCtx.globalAlpha = 0.7;
     mobileHeaderCtx.fillRect((window.innerWidth - window.innerWidth * 0.205), 196, 2, 24);
-}
+  }
 
-function drawMobileFooter() {
+  function drawMobileFooter() {
     var mobileFooterCanvas = document.getElementById('mobile-footer-canvas');
     var mobileFooterCtx = mobileFooterCanvas.getContext('2d');
     var imgDescent = document.getElementById('img-descent');
