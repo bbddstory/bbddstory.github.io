@@ -95,7 +95,7 @@ $(function() {
     var desktopNavCtx = desktopNavCanvas.getContext('2d');
 
     desktopNavCanvas.width = 250;
-    desktopNavCanvas.height = window.innerHeight;
+    desktopNavCanvas.height = window.innerHeight - 5;
 
     desktopNavCtx.clearRect(0, 0, desktopNavCanvas.width, window.innerHeight);
 
