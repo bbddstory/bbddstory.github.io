@@ -1,5 +1,5 @@
 <header id="moi-header">
-    <img src="../images/mugshot.jpg" title="Me with a deep sunburn at Panglao">
+    <img id="mugshot" src="../images/mugshot.jpg" title="Me with a sunburn at Panglao">
     <div>
         <h1>Forever Junior Dev<sup>*</sup></h1>
         <h3>Full Process Front-end Developer</h3>
@@ -46,3 +46,11 @@
     learning can one even comprehend one's own ignorance. So yes, I'll always be a junior dev in heart, it's the best way
     to stay vigilant and hungry.
 </footer>
+<script>
+$('#mugshot').on('mouseenter', function() {
+    $('#trio').show();
+})
+$('#trio').on('click', function() {
+    $('#trio').hide();
+})
+</script>

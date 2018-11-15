@@ -19,6 +19,7 @@ $(function() {
     drawDesktop();
   })
 
+
   function componentResize(){
     if(window.innerWidth > 520) {
         drawDesktop();
