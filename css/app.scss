@@ -1,5 +1,12 @@
+@import './customise';
+@import './views';
+@import './responsive';
+
 @media screen and (orientation: landscape) {
   body {
+    background: #eee;
+    font-family: "Fira Code";
+
     img, div, nav, main {
       display: none;
     }
@@ -9,17 +16,12 @@
       top: 50%;
       transform: translateY(-50%);
       width: 100%;
-      font-size: 18px;
       text-align: center;
     }
   }
 }
 
 @media screen and (orientation: portrait) {
-  @import './customise';
-  @import './views';
-  @import './responsive';
-
   body {
     position: relative;
     display: flex;
