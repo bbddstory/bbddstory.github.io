@@ -5,8 +5,6 @@ $(function() {
   var clientY = 150;
   var diverY = 999;
 
-  // screen.orientation.lock('portrait');
-
   $(window).on('load', function() {
     componentResize();
     drawDesktop(); // initialise canvas
@@ -161,13 +159,4 @@ $(function() {
       $('main article').load('views/moi.html');
     }
   }
-
-  // function isMobile() {
-  //   try {
-  //     document.createEvent("TouchEvent");
-  //     return true;
-  //   } catch(e) {
-  //     return false;
-  //   }
-  // }
 });
