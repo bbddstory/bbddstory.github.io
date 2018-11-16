@@ -47,10 +47,16 @@
     to stay vigilant and hungry.
 </footer>
 <script>
-$('#mugshot').on('mouseenter', function() {
-    $('#trio').show();
-})
-$('#trio').on('click', function() {
-    $('#trio').hide();
-})
+    document.getElementById('mugshot').addEventListener('touchend', function(e) {
+        $('#trio').show();
+        e.preventDefault();
+    });
+
+    $('#mugshot').on('mouseenter', function() {
+        $('#trio').show();
+    })
+    
+    $('#trio').on('click', function() {
+        $('#trio').hide();
+    })
 </script>
