@@ -2,102 +2,287 @@
 @import './views';
 @import './responsive';
 
-@media screen and (max-height: 569px) {
-  nav {
-    display: none;
-  }
-  main {
-    width: calc(100vw - 10px) !important;
-  }
-}
-
 body {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  background: #eee;
-  font-family: "Fira Code";
-
-  .landscape-msg {
-    display: none;
-  }
+  background-color: #eee;
 
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  
-    li {
-      margin-bottom: 20px;
+  }
 
-      a {
-        text-decoration: none;
-        color: #fff;
-      }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+#nav-diver {
+  position: absolute;
+  top: 270px;
+  left: 45px;
+}
+
+#bg-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Fira Code";
+
+  .clouds {
+    position: absolute;
+    z-index: -10;
+    width: 100vw;
+    top: 0;
+    
+    @media only screen and (max-width: 651px) {
+      transform: translateY(-50%);
+    }
+  
+    @media only screen and (min-width: 651px) and (max-width: 800px) {
+      transform: translateY(-55%);
+    }
+
+    @media only screen and (min-width: 801px) and (max-width: 1000px) {
+      transform: translateY(-60%);
+    }
+
+    @media only screen and (min-width: 1001px) {
+      transform: translateY(-65%);
     }
   }
 
-  main {
-    width: calc(100vw - 250px - 10px);
-    height: calc(100vh - 20px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    background: #eee;
-    margin-top: 10px;
+  .flying-fish {
+    position: absolute;
+  }
+  
+  .fish-1 {
+    z-index: 10;
+    top: 3vh;
+    left: 8vw;
+    width: 80px;
+    height: 80px;
+    opacity: .9;
+  }
+  
+  .fish-2 {
+    top: 4vh;
+    left: 30vw;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-7deg);
+    opacity: .5;
+  }
+  
+  .fish-3 {
+    z-index: 10;
+    top: 6vh;
+    right: 5vw;
+    width: 50px;
+    height: 50px;
+    transform: rotate(12deg);
+    opacity: .7;
+  }
+  
+  #canvas-ripple {
+    z-index: 0;
+    width: 100vw;
+    height: 15vh;
+  }
+  
+  #sea-bg {
+    background: #000;
+    width: 100vw;
+    height: 85vh;
+    background: #004a80; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00aef0, #004a80); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00aef0, #004a80); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00aef0, #004a80); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00aef0, #004a80); /* Standard syntax */
+    display: flex;
+    overflow: hidden;
 
-    article {
-      padding: 10vh 10%;
-    
-      h1 {
-        margin-top: 0;
-      }
+    nav {
+      position: relative;
+      width: 250px;
+      height: 85vh;
 
-      h3 {
-        line-height: 1.5;
-      }
-    
-      p {
-        line-height: 2;
-        margin-bottom: 25px;
-      }
-    
-      a {
-        color: #000;
-        text-decoration: none;
-        font-style: italic;
-    
-        &[target] {
-          font-weight: bold;
-        }
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      footer {
-        line-height: 2;
-        font-size: 14px;
-      }
-
-      .gallery {
-        img {
-          height: 268px;
-          margin-bottom: 5px;
-          object-fit: cover;
-        }
-      }
-
-      .separator {
+      #nav-wrapper {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
         display: flex;
-        justify-content: center;
-        margin: 30px 0;
+        flex-direction: column;
+        align-items: center;
+        
+        #nav-buoy {
+          width: 118px;
+          height: 110px;
+        }
+
+        #guide-line {
+          position: absolute;
+          top: 105px;
+          width: 2px;
+          height: calc(85vh - 200px);
+          background: -webkit-linear-gradient(#ebebeb, #00426e); /* For Safari 5.1 to 6.0 */
+          background: -o-linear-gradient(#ebebeb, #00426e); /* For Opera 11.1 to 12.0 */
+          background: -moz-linear-gradient(#ebebeb, #00426e); /* For Firefox 3.6 to 15 */
+          background: linear-gradient(#ebebeb, #00426e); /* Standard syntax */
+        }
+
+        #nav-up {
+          position: absolute;
+          font-size: 12px;
+          top: 140px;
+          left: 83px;
+
+          li {
+            margin-bottom: 30px;
+
+            span {
+              margin-right: 15px;
+              opacity: .5;
+            }
+          }
+        }
+
+        #nav-down {
+          position: absolute;
+          bottom: 110px;
+          left: 76px;
+          font-family: "Fira Code";
+          font-size: 12px;
+
+          span {
+            margin-right: 16px;
+            opacity: .5;
+          }
+        }
+
+        #bottom-plate {
+          position: absolute;
+          bottom: 37px;
+          opacity: .15;
+        }
+      }
+
+      #pi-symbol {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 15px;
+        font-family: "Fira Code";
+        opacity: .3;
+      }
+    }
+    
+    main {
+      width: calc(100vw - 250px);
+      height: calc(85vh - 15px);
+      background: #eee;
+      margin-top: 15px;
+      margin-right: 4vw;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(#000, .5);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(#000, .5);
+      box-shadow: 0px 0px 15px 0px rgba(#000, .5);
       
-        img {
-          width: 120px;
-          height: 120px;
+      article {
+        height: calc(85vh - 20vh - 35px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 10vh;
+        margin: 10px;
+
+        padding: 10vh 10%;
+    
+        h1 {
+          margin-top: 0;
+        }
+
+        h3 {
+          line-height: 1.5;
+        }
+      
+        p {
+          line-height: 2;
+          margin-bottom: 25px;
+        }
+      
+        a {
+          color: #000;
+          text-decoration: none;
+          font-style: italic;
+      
+          &[target] {
+            font-weight: bold;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        footer {
+          line-height: 2;
+          font-size: 14px;
+        }
+
+        .gallery {
+          img {
+            height: 268px;
+            margin-bottom: 5px;
+            object-fit: cover;
+          }
+        }
+
+        .separator {
+          display: flex;
+          justify-content: center;
+          margin: 30px 0;
+        
+          img {
+            width: 120px;
+            height: 120px;
+          }
         }
       }
     }
   }
 }
+
+// @media screen and (max-height: 569px) {
+//   nav {
+//     display: none;
+//   }
+//   main {
+//     width: calc(100vw - 10px) !important;
+//   }
+// }
+
+// body {
+//   position: relative;
+//   display: flex;
+//   overflow: hidden;
+//   background: #eee;
+//   font-family: "Fira Code";
+
+//   main {
+//     width: calc(100vw - 250px - 10px);
+//     height: calc(100vh - 20px);
+//     overflow-y: auto;
+//     overflow-x: hidden;
+//     background: #eee;
+//     margin-top: 10px;
+
+//     article {
+//       
+//     }
+//   }
+// }

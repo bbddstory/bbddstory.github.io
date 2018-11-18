@@ -58,6 +58,10 @@
 }
 
 .moi-links {
+  li {
+    margin-bottom: 20px;
+  }
+
   li::before {
     content: "-";
     margin-right: 10px;
@@ -96,19 +100,19 @@
     }
   }
 
-  #nav-up {
-    position: absolute;
-    top: 175px;
-    left: 80px;
-    font-size: 14px;
-  }
+  // #nav-up {
+  //   position: absolute;
+  //   top: 175px;
+  //   left: 80px;
+  //   font-size: 14px;
+  // }
   
-  #nav-down {
-    position: absolute;
-    bottom: 60px;
-    left: 72px;
-    font-size: 14px;
-  }
+  // #nav-down {
+  //   position: absolute;
+  //   bottom: 60px;
+  //   left: 72px;
+  //   font-size: 14px;
+  // }
 
   #pi-symbol {
     position: absolute;
