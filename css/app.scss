@@ -17,6 +17,12 @@ body {
   }
 }
 
+#nav-diver {
+  position: absolute;
+  top: 270px;
+  left: 45px;
+}
+
 #bg-wrapper {
   display: flex;
   flex-direction: column;
@@ -116,12 +122,6 @@ body {
         #nav-buoy {
           width: 118px;
           height: 110px;
-        }
-
-        #nav-diver{
-          position: absolute;
-          top: 100px;
-          left: 45px;
         }
 
         #guide-line {

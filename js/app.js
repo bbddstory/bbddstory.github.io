@@ -5,7 +5,7 @@ $(function() {
   // var clientY = 100;
   // var diverY = 999;
   // var diver = document.getElementById('nav-diver');
-  document.getElementById('nav-diver').style.top = "100px";
+  // document.getElementById('nav-diver').style.top = "100px";
 
   $(window).on('load', function() {
     // componentResize();
