@@ -101,8 +101,8 @@ $(function() {
     // console.log(top);
     
     var diverY = winInnerHeight - rippleHeight - top;
-    console.log(diverY);
-    console.log(e.clientY);
+    // console.log(diverY);
+    // console.log(e.clientY);
 
     // Diver
     // var diverOpacity = 1 - (clientY / window.innerHeight).toFixed(1);
