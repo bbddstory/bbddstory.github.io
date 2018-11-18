@@ -14,5 +14,7 @@
     "browser-sync": "^2.26.3",
     "node-sass": "^4.10.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "paper": "^0.11.8"
+  }
 }
