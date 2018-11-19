@@ -22,17 +22,20 @@ $(function() {
     var ascentDiver = document.getElementById('nav-diver-ascent');
     var descentDiver = document.getElementById('nav-diver-descent');
 
-    if(e.clientY > 300 && e.clientY < (window.innerHeight - 165)) {
+    if(e.clientY >= 300 && e.clientY <= (window.innerHeight - 165)) {
       // Ascending
-      if(e.clientY < prevClientY) {
-        ascentDiver.style.top = (parseInt(e.clientY) - ascentDiver.height/2) + 'px';
+      if(e.clientY <= prevClientY) {
+        console.log(parseInt(e.clientY) - ascentDiver.height/2);
+        
+        ascentDiver.style.top = e.clientY + 'px';
         ascentDiver.style.display = 'block';
         descentDiver.style.display = 'none';
       }
   
       // Descending
       if(e.clientY > prevClientY) {
-        descentDiver.style.top = (parseInt(e.clientY) - descentDiver.height/2) + 'px';
+        // descentDiver.style.top = (parseInt(e.clientY) - descentDiver.height/2) + 'px';
+        descentDiver.style.top = e.clientY + 'px';
         ascentDiver.style.display = 'none';
         descentDiver.style.display = 'block';
       }
