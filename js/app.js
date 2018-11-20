@@ -5,9 +5,9 @@ $(function() {
   var prevClientY = 0;
 
   document.getElementById('nav-diver-ascent').style.display = 'block';
-  document.getElementById('nav-diver-ascent').style.top = '250px';
+  document.getElementById('nav-diver-ascent').style.top = '350px';
   document.getElementById('nav-diver-descent').style.display = 'none';
-  document.getElementById('nav-diver-descent').style.top = '250px';
+  document.getElementById('nav-diver-descent').style.top = '350px';
 
   $(window).on('load', function() {
     initNav();
@@ -22,11 +22,10 @@ $(function() {
     var ascentDiver = document.getElementById('nav-diver-ascent');
     var descentDiver = document.getElementById('nav-diver-descent');
 
-    if(e.clientY >= 300 && e.clientY <= (window.innerHeight - 165)) {
+    if(e.clientY >= 350 && e.clientY <= (window.innerHeight - 230)) {
       // Ascending
       if(e.clientY <= prevClientY) {
-        console.log(parseInt(e.clientY) - ascentDiver.height/2);
-        
+        ascentDiver.style.opacity = 1 - (e.clientY / window.innerHeight).toFixed(1);
         ascentDiver.style.top = e.clientY + 'px';
         ascentDiver.style.display = 'block';
         descentDiver.style.display = 'none';
@@ -34,7 +33,7 @@ $(function() {
   
       // Descending
       if(e.clientY > prevClientY) {
-        // descentDiver.style.top = (parseInt(e.clientY) - descentDiver.height/2) + 'px';
+        descentDiver.style.opacity = 1 - (e.clientY / window.innerHeight).toFixed(1);
         descentDiver.style.top = e.clientY + 'px';
         ascentDiver.style.display = 'none';
         descentDiver.style.display = 'block';
@@ -42,13 +41,13 @@ $(function() {
     }
 
     // Ascended through the roof
-    if(e.clientY < 300) {
-      ascentDiver.style.top = (300 - ascentDiver.height/2) + 'px';
+    if(e.clientY < 350) {
+      ascentDiver.style.top = 350 + 'px';
     }
 
     // Descended through the bottom
-    if(e.clientY > (window.innerHeight - 165)) {
-      descentDiver.style.top = window.innerHeight - 165 - descentDiver.height/2 + 'px';
+    if(e.clientY > (window.innerHeight - 230)) {
+      descentDiver.style.top = window.innerHeight - 230 + 'px';
     }
 
     prevClientY = e.clientY;
