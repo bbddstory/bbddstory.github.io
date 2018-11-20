@@ -10,36 +10,41 @@
 </head>
 <body>
     <!-- <img id="trio" src="images/trio.jpg"> -->
-    <img id="nav-diver" src="images/diver_ascent.png">
-    <div id="bg-wrapper">
+    <img id="nav-diver-ascent" src="images/diver_ascent.png">
+    <img id="nav-diver-descent" src="images/diver_descent.png">
+    <div class="header">
+        <div class="sky-gradient"></div>
+        <img class="rainbow" src="images/rainbow.png">
         <img class="clouds" src="images/clouds.svg">
+        <canvas resize="true" hidpi="off" id="canvas-ripple"></canvas>
         <img class="flying-fish fish-1" src="images/flying_fish_left.png">
         <img class="flying-fish fish-2" src="images/flying_fish_right.png">
         <img class="flying-fish fish-3" src="images/flying_fish_right.png">
-        <canvas resize="true" hidpi="off" id="canvas-ripple"></canvas>
-        <div id="sea-bg">
-            <nav>
-                <div id="nav-wrapper">
-                    <img id="nav-buoy" src="images/buoy_large.png">
-                    <div id="guide-line"></div>
-                    <ul id="nav-up">
-                        <li><a href="#moi"><span>-10m</span>Moi</a></li>
-                        <li><a href="#projects"><span>-20m</span>Projects</a></li>
-                        <li><a href="#dive"><span>-30m</span>Dive! Dive!</a></li>
-                        <li><a href="#stars"><span>-40m</span>The Stars</a></li>
-                        <li><a href="#life"><span>-50m</span>C'est la vie</a></li>
-                    </ul>
-                    <ul id="nav-down">
-                        <li><a href="#records"><span>-130m</span>WR 2018</a></li>
-                    </ul>
-                    <img id="bottom-plate" src="images/bottom_plate.png">
-                </div>
-                <a id="pi-symbol" href="#pi">π</a>
-            </nav>
-            <main>
-                <article></article>
-            </main>
-        </div>
+        <img class="flying-fish fish-4" src="images/flying_fish_right.png">
+        <img id="buoy-mobile" src="images/buoy_large.png">
+    </div>
+    <div id="content-wrapper">
+        <nav>
+            <div id="nav-el-wrapper">
+                <img id="nav-buoy" src="images/buoy_large.png">
+                <div id="guide-line"></div>
+                <ul id="nav-up">
+                    <li><a href="#moi"><span>-10m</span>Moi</a></li>
+                    <li><a href="#projects"><span>-20m</span>Projects</a></li>
+                    <li><a href="#dive"><span>-30m</span>Dive! Dive!</a></li>
+                    <li><a href="#stars"><span>-40m</span>The Stars</a></li>
+                    <li><a href="#life"><span>-50m</span>C'est la vie</a></li>
+                </ul>
+                <ul id="nav-down">
+                    <li><a href="#records"><span>-130m</span>WR 2018</a></li>
+                </ul>
+                <img id="bottom-plate" src="images/bottom_plate.png">
+            </div>
+            <a id="pi-symbol" href="#pi">π</a>
+        </nav>
+        <main>
+            <article></article>
+        </main>
     </div>
     <script type="text/paperscript" canvas="canvas-ripple">
     var values = {
@@ -149,70 +154,6 @@
         }
     }*/
     </script>
-    
-    <!-- <div class="canvas"> -->
-        
-    <!-- </div> -->
-
-    <!-- <div id="nav-el">
-        <img id="img-buoy" src="images/buoy.png">
-        <img id="img-buoy-mobile" src="images/buoy_mobile.png">
-        <img id="img-descent" src="images/diver_descent.png">
-        <img id="img-ascent" src="images/diver_ascent.png">
-        <img id="img-ascent-left" src="images/diver_ascent_left.png">
-        <img id="img-bottom-plate" src="images/bottom_plate.png">
-    </div>
-    <nav id="nav-desktop">
-        <canvas id="desktop-nav-canvas">
-            Your browser does not support the HTML5 canvas tag.
-        </canvas>
-        <ul id="nav-up">
-            <li><a href="#moi"><span>-10m</span>Moi</a></li>
-            <li><a href="#projects"><span>-20m</span>Projects</a></li>
-            <li><a href="#dive"><span>-30m</span>Dive! Dive!</a></li>
-            <li><a href="#stars"><span>-40m</span>The Stars</a></li>
-            <li><a href="#life"><span>-50m</span>C'est la vie</a></li>
-        </ul>
-        <ul id="nav-down">
-            <li><a href="#records"><span>-130m</span>WR 2018</a></li>
-        </ul>
-        <a id="pi-symbol" href="#pi">π</a>
-    </nav>
-    <main>
-        <header id="mobile-header">
-            <div>
-                <h1><span>F</span>OREVER <span>J</span>UNIOR <span>D</span>EV</h1>
-                <h4>Full Process<br>Front-end Developer</h4>
-            </div>
-            <canvas id="mobile-header-canvas">
-                Your browser does not support the HTML5 canvas tag.
-            </canvas>
-        </header>
-        <article></article>
-        <footer id="mobile-footer">
-            <canvas id="mobile-footer-canvas">
-                Your browser does not support the HTML5 canvas tag.
-            </canvas>
-            <ul id="nav-footer">
-                <li><a href="#moi">Moi</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#dive">Dive! Dive!</a></li>
-                <li><a href="#stars">The Stars</a></li>
-                <li><a href="#life">C'est la vie</a></li>
-                <li><a href="#records">WR 2018</a></li>
-            </ul>
-            <ul id="measure-footer">
-                <li><a href="#moi">-10m</a></li>
-                <li><a href="#projects">-20m</a></li>
-                <li><a href="#dive">-30m</a></li>
-                <li><a href="#stars">-40m</a></li>
-                <li><a href="#life">-50m</a></li>
-                <li><a href="#records">-130m</a></li>
-            </ul>
-            <span class="motto">Follow your heart, always.</span>
-            <a id="pi-symbol" href="#pi">π</a>
-        </footer>
-    </main> -->
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/paper-full.min.js"></script>
     <script src="js/app.js"></script>
