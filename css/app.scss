@@ -1,6 +1,11 @@
 @import './customise';
-@import './responsive';
-@import './views';
+@import './header';
+@import './content';
+@import './nav';
+@import './main';
+@import './footer';
+
+@import './moi';
 
 body {
   background-color: #1c97e3; // #87CEEB
@@ -17,270 +22,27 @@ body {
     color: #fff;
   }
 
-  #nav-diver-ascent {
-    position: absolute;
-    top: 280px;
-    left: 45px;
-    height: 120px;
-  }
-  
-  #nav-diver-descent {
-    display: none;
-    position: absolute;
-    top: 280px;
-    left: 35px;
-    height: 120px;
-    transform: rotate(180deg);
-  }
-  
-  .header {
-    position: relative;
-    width: 100vw;
-    height: 20vh;
-  
-    .sky-gradient {
+  @media only screen and (min-width: 501px) {
+    #diver-ascent {
       position: absolute;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 20vh;
-      // background: #1c97e3; /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient(#1c97e3, #fff); /* For Safari 5.1 to 6.0 */ // #87CEEB
-      background: -o-linear-gradient(#1c97e3, #fff); /* For Opera 11.1 to 12.0 */ // #87CEEB
-      background: -moz-linear-gradient(#1c97e3, #fff); /* For Firefox 3.6 to 15 */ // #87CEEB
-      background: linear-gradient(#1c97e3, #fff); /* Standard syntax */ // #87CEEB
+      top: 280px;
+      left: 45px;
+      height: 120px;
     }
-  
-    .rainbow {
+    
+    #diver-descent {
       display: none;
-    }
-
-    .clouds {
       position: absolute;
-      z-index: 2000;
-      width: 100vw;
-      bottom: 0;
-    }
-  
-    #canvas-ripple {
-      position: absolute;
-      z-index: 3000;
-      width: 100vw;
-      height: 100%;
-    }
-  
-    .flying-fish {
-      position: absolute;
-    }
-    
-    .fish-1 {
-      z-index: 3100;
-      top: 5vh;
-      left: 8vw;
-      width: 80px;
-      height: 80px;
-      opacity: .9;
-    }
-    
-    .fish-2 {
-      z-index: 2900;
-      top: 7vh;
-      left: 30vw;
-      width: 30px;
-      height: 30px;
-      transform: rotate(-7deg);
-      opacity: .4;
-    }
-    
-    .fish-3 {
-      z-index: 2900;
-      top: 9vh;
-      right: 20vw;
-      width: 35px;
-      height: 35px;
-      transform: rotate(38deg);
-      opacity: .55;
-    }
-
-    .fish-4 {
-      z-index: 3100;
-      top: 7vh;
-      right: 5vw;
-      width: 50px;
-      height: 50px;
-      transform: rotate(12deg);
-      opacity: .7;
-    }
-
-    #buoy-mobile {
-      display: none;
+      top: 280px;
+      left: 35px;
+      height: 120px;
+      transform: rotate(180deg);
     }
   }
-  
-  #content-wrapper {
-    background: #000;
-    width: 100vw;
-    height: 80vh;
-    font-family: "Fira Code";
-    background: #004a80; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#00aef0, #004a80); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#00aef0, #004a80); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#00aef0, #004a80); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#00aef0, #004a80); /* Standard syntax */
-    display: flex;
-    overflow: hidden;
-  
-    nav {
-      position: relative;
-      width: 250px;
-      height: 80vh;
-  
-      #nav-el-wrapper {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        #nav-buoy {
-          width: 118px;
-          height: 110px;
-          margin-top: 10px;
-        }
-  
-        #guide-line {
-          position: absolute;
-          top: 105px;
-          width: 2px;
-          height: calc(80vh - 205px);
-          background: -webkit-linear-gradient(#ebebeb, #00426e); /* For Safari 5.1 to 6.0 */
-          background: -o-linear-gradient(#ebebeb, #00426e); /* For Opera 11.1 to 12.0 */
-          background: -moz-linear-gradient(#ebebeb, #00426e); /* For Firefox 3.6 to 15 */
-          background: linear-gradient(#ebebeb, #00426e); /* Standard syntax */
-          opacity: .7
-        }
-  
-        #nav-up {
-          position: absolute;
-          font-size: 12px;
-          top: 145px;
-          left: 86px;
-  
-          li {
-            margin-bottom: 30px;
-  
-            span {
-              margin-right: 15px;
-              opacity: .5;
-            }
-          }
-        }
-  
-        #nav-down {
-          position: absolute;
-          left: 80px;
-          bottom: 120px;
-          font-family: "Fira Code";
-          font-size: 12px;
-  
-          span {
-            margin-right: 16px;
-            opacity: .5;
-          }
-        }
-  
-        #bottom-plate {
-          position: absolute;
-          bottom: 43px;
-          opacity: .12;
-        }
-      }
-  
-      #pi-symbol {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 15px;
-        font-family: "Fira Code";
-        opacity: .3;
-      }
-    }
-    
-    main {
-      width: calc(100vw - 250px);
-      height: calc(80vh - 10px);
-      background: #eee;
-      margin-top: 10px;
-      margin-right: 1vw;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      -webkit-box-shadow: 0px 0px 10px 0px rgba(#000, .5);
-      -moz-box-shadow: 0px 0px 10px 0px rgba(#000, .5);
-      box-shadow: 0px 0px 10px 0px rgba(#000, .5);
-      
-      article {
-        height: calc(80vh - 20vw - 30px);
-        overflow-x: hidden;
-        overflow-y: auto;
-        padding: 10vw;
-        margin: 10px;
-    
-        h1 {
-          margin-top: 0;
-        }
-  
-        h3 {
-          line-height: 1.5;
-        }
-      
-        p {
-          line-height: 2;
-          margin-bottom: 25px;
-        }
-      
-        a {
-          color: #000;
-          text-decoration: none;
-          font-style: italic;
-      
-          &[target] {
-            font-weight: bold;
-          }
-  
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-  
-        footer {
-          line-height: 2;
-          font-size: 14px;
-        }
-  
-        .gallery {
-          img {
-            height: 268px;
-            margin-bottom: 5px;
-            object-fit: cover;
-          }
-        }
-  
-        .separator {
-          display: flex;
-          justify-content: center;
-          margin: 30px 0;
-        
-          img {
-            width: 120px;
-            height: 120px;
-          }
-        }
-      }
+
+  @media only screen and (max-width: 500px) {
+    #diver-ascent, #diver-descent {
+      display: none;
     }
   }
 }
