@@ -1,10 +1,66 @@
 #header {
   position: relative;
+  overflow: hidden;
   width: 100vw;
   height: 20vh;
 
   .rainbow {
-    display: none;
+    position: absolute;
+    top: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1500;
+    
+    .base-ring {
+      width: 50vw;
+      height: 50vh;
+      border-width: 0.625em;
+      border-style: solid;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+    }
+    
+    .outer-ring {
+      display: table;
+      border-width: 0.625em;
+      border-style: solid;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+    }
+    
+    .purple-ring {
+      border-width: 0.500em;
+      border-color: #b34e9a;
+    }
+
+    .blue-ring {
+      border-color: #378fce;
+    }
+
+    .cyan-ring {
+      border-width: 0.438em;
+      border-color: #86d3e7;
+    }
+
+    .green-ring {
+      border-width: 0.375em;
+      border-color: #a8ce43;
+    }
+
+    .yellow-ring {
+      border-width: 0.813em;
+      border-color: #efd90a;
+    }
+
+    .orange-ring {
+      border-width: 0.813em;
+      border-color: #f68b21;
+    }
+
+    .red-ring {
+      border-width: 1.125em;
+      border-color: #ee1d23;
+    }
   }
 
   .sky-gradient {
