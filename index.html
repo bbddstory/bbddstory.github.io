@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+    <img id="trio" src="images/trio.jpg">
     <img id="diver-ascent" src="images/diver_ascent.png">
     <img id="diver-descent" src="images/diver_descent.png">
+    <img id="buoy-mobile" src="images/buoy_mobile.png">
     <div id="header">
+        <div class="sky-gradient"></div>
         <div class="rainbow">
             <div class="outer-ring red-ring">
                 <div class="outer-ring orange-ring">
@@ -27,21 +30,25 @@
                 </div>
             </div>
         </div>
-        <div class="sky-gradient"></div>
+        <div id="rainbow-mask"></div>
         <img id="cloud" src="images/cloud.svg">
+        <img id="cloud-mobile" src="images/cloud.png">
         <canvas resize="true" hidpi="off" id="canvas-ripple"></canvas>
+        <div id="title-wrap">
+            <span id="title">Forever Junior Dev</span>
+            <span id="subtitle">Full Process Front-end Developer</span>
+        </div>
         <img id="fish-1" class="flying-fish" src="images/flying_fish_left.png">
         <img id="fish-2" class="flying-fish" src="images/flying_fish_right.png">
         <img id="fish-3" class="flying-fish" src="images/flying_fish_right.png">
         <img id="fish-4" class="flying-fish" src="images/flying_fish_right.png">
-        <!-- <img id="buoy-mobile" src="images/buoy_large.png"> -->
     </div>
     <div id="content">
         <nav>
             <div id="nav-el-wrapper">
                 <img id="nav-buoy" src="images/buoy_large.png">
                 <div id="mark" title="My personal best so far, 35 meters"></div>
-                <div id="guide-line"></div>
+                <div id="guideline"></div>
                 <ul id="nav-up">
                     <li><a href="#moi"><span>-10m</span>Moi</a></li>
                     <li><a href="#projects"><span>-20m</span>Projects</a></li>
@@ -57,8 +64,19 @@
             <a id="pi-symbol" href="#pi">π</a>
         </nav>
         <main>
+            <div id="guideline"></div>
             <article></article>
         </main>
+    </div>
+    <div id="footer-mobile">
+        <ul id="nav-mobile">
+            <li><a href="#moi"><span>-10m</span>Moi</a></li>
+            <li><a href="#projects"><span>-20m</span>Projects</a></li>
+            <li><a href="#dive"><span>-30m</span>Dive! Dive!</a></li>
+            <li><a href="#stars"><span>-40m</span>The Stars</a></li>
+            <li><a href="#life"><span>-50m</span>C'est la vie</a></li>
+            <li><a href="#records"><span>-130m</span>WR 2018</a></li>
+        </ul>
     </div>
     <script type="text/paperscript" canvas="canvas-ripple">
     var values = {

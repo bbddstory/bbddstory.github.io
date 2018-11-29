@@ -1,8 +1,166 @@
+@media only screen and (min-width: 1101px) {
+  #header {
+    .rainbow {
+      .base-ring {
+        width: 60vw;
+        height: 60vw;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1100px) {
+  #header {
+    .rainbow {
+      .base-ring {
+        width: 65vw;
+        height: 65vw;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 900px) {
+  #header {
+    .rainbow {
+      .base-ring {
+        width: 75vw;
+        height: 75vw;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 700px) {
+  #header {
+    .rainbow {
+      .base-ring {
+        width: 85vw;
+        height: 85vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #header {
+    height: 90vw !important;
+
+    .sky-gradient {
+      height: 50vh !important;
+    }
+
+    .rainbow {
+      top: 18vw !important;
+
+      .base-ring {
+        width: 60vw;
+        height: 60vw;
+      }
+    }
+
+    #rainbow-mask {
+      position: absolute;
+      z-index: 1600;
+      bottom: 0;
+      width: 100vw;
+      height: 18vw;
+      background-color: #00aeef;
+    }
+    
+    #cloud {
+      display: none !important;
+    }
+
+    #cloud-mobile {
+      display: block !important;
+      width: 120vw !important;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom: 5px solid #fff;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+
+    #canvas-ripple {
+      display: none;
+    }
+
+    #title-wrap {
+      position: absolute;
+      z-index: 3100;
+      top: 6vw;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      text-align: center;
+      font-family: "Fira Code Bold";
+      -webkit-text-shadow: 0px 2px 3px rgba(#000, .3);
+      -moz-text-shadow: 0px 2px 3px rgba(#000, .3);
+      text-shadow: 0px 2px 3px rgba(#000, .3);
+      
+      #title {
+        font-size: 8vw;
+        line-height: 1.5;
+        color: #fff;
+      }
+
+      #subtitle {
+        font-size: 4.44vw;
+        color: #fff;
+      }
+    }
+
+    #fish-1 {
+      top: 24vw !important;
+      left: 6vw !important;
+      width: 35vw !important;
+      height: 35vw !important;
+      transform: rotate(13deg);
+    }
+    
+    #fish-2 {
+      display: none;
+    }
+    
+    #fish-3 {
+      z-index: 1400 !important;
+      top: 36vw !important;
+      right: 35vw !important;
+      transform: rotate(-25deg) !important;
+      opacity: .3 !important;
+    }
+
+    #fish-4 {
+      top: 43vw !important;
+      right: 10vw !important;
+      width: 17vw !important;
+      height: 17vw !important;
+      transform: rotate(-8deg) !important;
+      opacity: .6 !important;
+    }
+  }
+}
+
 #header {
   position: relative;
   overflow: hidden;
   width: 100vw;
   height: 20vh;
+
+  .sky-gradient {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+    background: #1c97e3; // For browsers that do not support gradients
+    background: -webkit-linear-gradient(#1c97e3, #fff); /* For Safari 5.1 to 6.0 */ // #87CEEB
+    background: -o-linear-gradient(#1c97e3, #fff); /* For Opera 11.1 to 12.0 */ // #87CEEB
+    background: -moz-linear-gradient(#1c97e3, #fff); /* For Firefox 3.6 to 15 */ // #87CEEB
+    background: linear-gradient(#1c97e3, #fff); /* Standard syntax */ // #87CEEB
+  }
 
   .rainbow {
     position: absolute;
@@ -12,8 +170,6 @@
     z-index: 1500;
     
     .base-ring {
-      width: 50vw;
-      height: 50vh;
       border-width: 0.625em;
       border-style: solid;
       border-top-left-radius: 50%;
@@ -63,21 +219,15 @@
     }
   }
 
-  .sky-gradient {
+  #cloud {
     position: absolute;
-    z-index: 1000;
-    top: 0;
-    left: 0;
+    z-index: 2000;
     width: 100vw;
-    height: 20vh;
-    background: #1c97e3; // For browsers that do not support gradients
-    background: -webkit-linear-gradient(#1c97e3, #fff); /* For Safari 5.1 to 6.0 */ // #87CEEB
-    background: -o-linear-gradient(#1c97e3, #fff); /* For Opera 11.1 to 12.0 */ // #87CEEB
-    background: -moz-linear-gradient(#1c97e3, #fff); /* For Firefox 3.6 to 15 */ // #87CEEB
-    background: linear-gradient(#1c97e3, #fff); /* Standard syntax */ // #87CEEB
+    bottom: 0;
   }
 
-  #cloud {
+  #cloud-mobile {
+    display: none;
     position: absolute;
     z-index: 2000;
     width: 100vw;
@@ -133,8 +283,4 @@
     transform: rotate(12deg);
     opacity: .7;
   }
-
-  // #buoy-mobile {
-  //   display: none;
-  // }
 }
