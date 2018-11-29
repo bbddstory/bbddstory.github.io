@@ -1,0 +1,10 @@
+@media only screen and (max-width: 500px) {
+  #footer-mobile {
+    display: block !important;
+    background-color: #004a80;
+  }
+}
+
+#footer-mobile {
+  display: none;
+}

@@ -1,0 +1,129 @@
+@media only screen and (max-width: 1366px) {
+  main {
+    article {
+      .gallery {
+        img {
+          height: auto !important;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  main {
+    width: calc(100vw - 250px);
+    height: calc(80vh - 10px);
+    margin-top: 10px;
+    margin-right: 1vw;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    width: 100vw;
+    height: 100%;
+    padding-top: 8vw;
+    background-color: transparent !important;
+
+    #guideline {
+      position: absolute;
+      top: 0;
+      right: 17.6vw;
+      width: 2px;
+      height: 100%;
+      background-color: red;
+      background: -webkit-linear-gradient(#00aef0, #004a80); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#00aef0, #004a80); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#00aef0, #004a80); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#ebebeb, #00426e); /* Standard syntax */
+      opacity: .4;
+    }
+
+    article {
+      height: 100% !important;
+      color: #f2f2f2;
+      padding: 8vw !important;
+
+      p {
+        line-height: 1.8 !important;
+      }
+
+      a {
+        color: #f2f2f2 !important;
+      }
+    }
+  }
+}
+
+main {
+  position: relative;
+  background-color: #eee;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(#000, .5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(#000, .5);
+  box-shadow: 0px 0px 10px 0px rgba(#000, .5);
+  
+  article {
+    height: calc(80vh - 20vw - 30px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10vw;
+    margin: 10px;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    h3 {
+      line-height: 1.5;
+    }
+  
+    p {
+      text-align: justify;
+      line-height: 2;
+      margin-bottom: 25px;
+    }
+  
+    a {
+      color: #000;
+      text-decoration: none;
+      font-style: italic;
+  
+      &[target] {
+        font-weight: bold;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    footer {
+      line-height: 2;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .gallery {
+      img {
+        height: 268px;
+        margin-bottom: 5px;
+        object-fit: cover;
+      }
+    }
+
+    .separator {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}
