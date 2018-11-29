@@ -36,7 +36,7 @@
     height: 100vh;
     overflow-y: auto !important;
 
-    ::-webkit-scrollbar {
+    &::-webkit-scrollbar {
       display: none;
     }
 
@@ -60,7 +60,7 @@
 }
 
 body {
-  background-color: #1c97e3; // #87CEEB
+  background-color: #004a80; // #87CEEB
   overflow: hidden;
 
   ul {
