@@ -14,7 +14,8 @@
     #nav-mobile:nth-child(2) {
       text-align: left;
       a {
-        color: #7490ad !important;
+        color: #fff !important;
+        opacity: .5;
       }
     }
 
@@ -68,7 +69,8 @@
     display: flex !important;
     justify-content: space-between;
     font-family: "Fira Code Light";
-    color: #7490ad;
+    color: #fff;
+    opacity: .5;
     padding: 0 calc(7vw + 10px) 40px;
 
     span {
@@ -79,5 +81,5 @@
 
 #footer-mobile, #motto {
   display: none;
-  background-color: #004a80;
+  // background-color: #004a80;
 }
