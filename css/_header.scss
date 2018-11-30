@@ -156,10 +156,10 @@
     width: 100vw;
     height: 20vh;
     background: #1c97e3; // For browsers that do not support gradients
-    background: -webkit-linear-gradient(#1c97e3, #fff); /* For Safari 5.1 to 6.0 */ // #87CEEB
-    background: -o-linear-gradient(#1c97e3, #fff); /* For Opera 11.1 to 12.0 */ // #87CEEB
-    background: -moz-linear-gradient(#1c97e3, #fff); /* For Firefox 3.6 to 15 */ // #87CEEB
-    background: linear-gradient(#1c97e3, #fff); /* Standard syntax */ // #87CEEB
+    background: -webkit-linear-gradient(#1c97e3, #f2f2f2); /* For Safari 5.1 to 6.0 */ // #87CEEB
+    background: -o-linear-gradient(#1c97e3, #f2f2f2); /* For Opera 11.1 to 12.0 */ // #87CEEB
+    background: -moz-linear-gradient(#1c97e3, #f2f2f2); /* For Firefox 3.6 to 15 */ // #87CEEB
+    background: linear-gradient(#1c97e3, #f2f2f2); /* Standard syntax */ // #87CEEB
   }
 
   .rainbow {
@@ -185,7 +185,7 @@
     }
     
     .purple-ring {
-      border-width: 0.500em;
+      border-width: 0.5em;
       border-color: #b34e9a;
     }
 
