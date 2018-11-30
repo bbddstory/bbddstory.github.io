@@ -10,6 +10,11 @@
   #body-wrap {
     height: 100vh;
     overflow-y: auto !important;
+    background: #004a80; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00aef0, #004a80); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00aef0, #004a80); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00aef0, #004a80); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00aef0, #004a80); /* Standard syntax */
     
     &::-webkit-scrollbar {
       display: none;
@@ -28,7 +33,7 @@
       position: absolute;
       z-index: 3100;
       top: 65vw;
-      right: 10vw;
+      right: 12vw;
       width: 16vw;
     }
   }
@@ -37,7 +42,7 @@
 #body-wrap {
   position: relative;
   height: 100vh;
-  background-color: #1c97e3; // #87CEEB, #004a80
+  background-color: #004a80; // #87CEEB, #004a80
   overflow: hidden;
 
   ul {
