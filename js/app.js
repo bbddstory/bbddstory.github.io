@@ -16,10 +16,10 @@ $(function() {
   });
 
   function initNav() {
-    $('nav a, footer a').on('click', function(e) {
+    $('nav a, #nav-mobile a, #motto a').on('click', function(e) {
       $('main article').load('views/' + e.target.hash.replace('#', '') + '.html', function() {
-        // $('main').scrollTop(0); // Back to top w/o animation
-        $('article').stop().animate({ scrollTop : 0 }, 500); // Animated back to top scroll
+        // $('article, #body-wrap').scrollTop(0); // Back to top w/o animation
+        $('article, #body-wrap').stop().animate({ scrollTop : 0 }, 500); // Animated back to top scroll
       })
     })
   }

@@ -6,36 +6,11 @@
 @import './footer';
 @import './moi';
 
-@media only screen and (min-width: 501px) {
-  body {
-    #diver-ascent {
-      display: block;
-      position: absolute;
-      top: 350px;
-      left: 45px;
-      height: 120px;
-    }
-    
-    #diver-descent {
-      display: none;
-      position: absolute;
-      top: 350px;
-      left: 35px;
-      height: 120px;
-      transform: rotate(180deg);
-    }
-
-    #buoy-mobile {
-      display: none;
-    }
-  }
-}
-
 @media only screen and (max-width: 500px) {
-  body {
+  #body-wrap {
     height: 100vh;
     overflow-y: auto !important;
-
+    
     &::-webkit-scrollbar {
       display: none;
     }
@@ -43,11 +18,11 @@
     #diver-ascent {
       display: none !important;
     }
-  
+    
     #diver-descent {
       display: none !important;
     }
-
+    
     #buoy-mobile {
       display: block !important;
       position: absolute;
@@ -59,8 +34,10 @@
   }
 }
 
-body {
-  background-color: #004a80; // #87CEEB
+#body-wrap {
+  position: relative;
+  height: 100vh;
+  background-color: #1c97e3; // #87CEEB, #004a80
   overflow: hidden;
 
   ul {
@@ -72,5 +49,26 @@ body {
   a {
     text-decoration: none;
     color: #fff;
+  }
+
+  #diver-ascent {
+    display: block;
+    position: absolute;
+    top: 350px;
+    left: 45px;
+    height: 120px;
+  }
+  
+  #diver-descent {
+    display: none;
+    position: absolute;
+    top: 350px;
+    left: 35px;
+    height: 120px;
+    transform: rotate(180deg);
+  }
+
+  #buoy-mobile {
+    display: none;
   }
 }

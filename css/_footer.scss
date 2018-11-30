@@ -1,10 +1,83 @@
 @media only screen and (max-width: 500px) {
   #footer-mobile {
-    display: block !important;
-    background-color: #004a80;
+    position: relative;
+    display: flex !important;
+    height: 350px;
+    padding: 0 calc(7vw + 10px);
+    justify-content: space-between;
+    font-family: "Fira Code Light";
+
+    li {
+      margin-bottom: 25px;
+    }
+
+    #nav-mobile:nth-child(2) {
+      text-align: left;
+      a {
+        color: #7490ad !important;
+      }
+    }
+
+    #diver-descent-mobile {
+      position: absolute;
+      left: -10vw;
+      bottom: 0;
+      height: 65vh;
+      transform: scaleY(-1);
+      opacity: .2;
+    }
+
+    #guideline-mobile-down {
+      position: absolute;
+      top: 0;
+      right: 20vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      #guideline-mobile-down-line {
+        width: 2px;
+        height: 248px;
+        background: #00aef0;
+        background: -webkit-linear-gradient(#00426e, rgba(255,255,255,.0)); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#00426e, rgba(255,255,255,.0)); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#00426e, rgba(255,255,255,.0)); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(rgba(255,255,255,.0), #00426e); /* Standard syntax */
+      }
+  
+      img {
+        margin-top: -8px;
+        opacity: .12;
+      }
+
+      #mark-mobile {
+        position: absolute;
+        z-index: 1000;
+        top: 112px;
+        width: 10px;
+        height: 10px;
+        background-color: #FB9823;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #motto {
+    position: relative;
+    display: flex !important;
+    justify-content: space-between;
+    font-family: "Fira Code Light";
+    color: #7490ad;
+    padding: 0 calc(7vw + 10px) 40px;
+
+    span {
+      font-size: 0.875em;
+    }
   }
 }
 
-#footer-mobile {
+#footer-mobile, #motto {
   display: none;
+  background-color: #004a80;
 }
