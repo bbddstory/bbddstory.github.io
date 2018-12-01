@@ -6,7 +6,6 @@
 
 #content {
   width: 100vw;
-  margin-bottom: -1px;
   font-family: "Fira Code Light";
   background: #00aef0; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#00aef0, #004a80); /* For Safari 5.1 to 6.0 */
@@ -15,4 +14,10 @@
   background: linear-gradient(#00aef0, #004a80); /* Standard syntax */
   display: flex;
   overflow: hidden;
+}
+
+@media only screen and (max-height: 610px) {
+  #content {
+    height: 100vh;
+  }
 }
