@@ -50,19 +50,20 @@
       #guideline-mobile-up {
         position: absolute;
         top: 0;
-        right: 19.7vw;
+        right: 20.7vw;
         width: 2px;
-        height: 50vw;
+        height: 30vw;
         background: #00426e;
         background: -webkit-linear-gradient(#00426e, rgba(255,255,255,.0)); /* For Safari 5.1 to 6.0 */
         background: -o-linear-gradient(#00426e, rgba(255,255,255,.0)); /* For Opera 11.1 to 12.0 */
         background: -moz-linear-gradient(#00426e, rgba(255,255,255,.0)); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(#76cbec, rgba(255,255,255,.0)); /* Standard syntax */
+        background: linear-gradient(#00426e, rgba(255,255,255,.0)); /* Standard syntax */
+        opacity: .5;
       }
 
       article {
         height: 100% !important;
-        background: url(/images/diver_descent_down.png) -11vw 99% no-repeat;
+        background: url(/images/diver_descent_down.png) -11vw 100% no-repeat;
         padding: calc(7vw + 10px) !important;
         margin: 0 !important;
         color: #fff;
@@ -88,6 +89,22 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-height: 610px) {
+  #content main {
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+
+  #content main article {
+    width: 100vw !important;
+    height: 100vh !important;
+    box-sizing: border-box;
+    margin: 0 !important;
   }
 }
 

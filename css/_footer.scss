@@ -3,7 +3,7 @@
     position: relative;
     display: flex !important;
     height: 350px;
-    padding: 0 calc(7vw + 10px);
+    padding: 30px calc(7vw + 10px) 0;
     justify-content: space-between;
     font-family: "Fira Code Light";
 
@@ -30,8 +30,8 @@
 
     #guideline-mobile-down {
       position: absolute;
-      top: 0;
-      right: 20vw;
+      top: 30px;
+      right: 19vw;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -75,6 +75,10 @@
 
     span {
       font-size: 0.875em;
+    }
+
+    a {
+      margin: 0 0 10px 10px;
     }
   }
 }

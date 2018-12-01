@@ -33,16 +33,22 @@
       position: absolute;
       z-index: 3100;
       top: 65vw;
-      right: 12vw;
+      right: 13vw;
       width: 16vw;
     }
+  }
+}
+
+@media only screen and (max-height: 610px) {
+  #diver-ascent, #diver-descent {
+    display: none !important;
   }
 }
 
 #body-wrap {
   position: relative;
   height: 100vh;
-  background-color: #004a80; // #87CEEB, #004a80
+  background-color: #007ab6; // #87CEEB, #004a80
   overflow: hidden;
 
   ul {

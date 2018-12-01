@@ -145,3 +145,9 @@
     display: none;
   }
 }
+
+@media only screen and (max-height: 610px) {
+  nav {
+    display: none;
+  }
+}
