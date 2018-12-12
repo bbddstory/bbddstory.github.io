@@ -2,7 +2,7 @@
  * Created by Leon Li on 14/02/2017.
  */
 $(function() {
-  var topOffset = 350, bottomOffset = 230, prevClientY = 0;
+  var topOffset = 0, bottomOffset = 230, prevClientY = 0;
 
   $(window).on('load', function() {
     initNav();
@@ -41,6 +41,8 @@ $(function() {
   function diverTracking(e) {
     var ascentDiver = $('#diver-ascent')[0];
     var descentDiver = $('#diver-descent')[0];
+
+    topOffset = window.innerHeight * 0.2 + 120;
 
     if(e.clientY >= topOffset && e.clientY <= (window.innerHeight - bottomOffset)) {
       // Ascending
