@@ -146,9 +146,10 @@
 
 #header {
   position: relative;
+  z-index: 0;
   overflow: hidden;
   width: 100vw;
-  height: 20vh;
+  height: 21vh;
 
   .sky-gradient {
     position: absolute;

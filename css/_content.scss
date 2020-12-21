@@ -5,6 +5,10 @@
 }
 
 #content {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  overflow: hidden;
   width: 100vw;
   font-family: "Fira Code Light";
   background: #00aef0; /* For browsers that do not support gradients */
@@ -12,8 +16,7 @@
   background: -o-linear-gradient(#00aef0, #004a80); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#00aef0, #004a80); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#00aef0, #004a80); /* Standard syntax */
-  display: flex;
-  overflow: hidden;
+  margin-top: -1vh;
 }
 
 @media only screen and (max-height: 610px) {
