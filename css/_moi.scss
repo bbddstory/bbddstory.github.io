@@ -12,16 +12,16 @@
   box-shadow: 0px 0px 15px 0px rgba(#000, .5);
   cursor: pointer;
 
-  @media only screen and (min-width: 501px) {
+  @media only screen and (min-width: 701px) {
     height: 90vmin;
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 700px) {
     width: 90vw;
   }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 900px) {
+@media only screen and (min-width: 701px) and (max-width: 900px) {
   #moi-header {
     h1 {
       font-size: 3.5vw !important;
@@ -33,7 +33,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   #moi-header {
     #mugshot {
       width: 35vw !important;
