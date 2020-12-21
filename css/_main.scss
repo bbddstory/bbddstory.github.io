@@ -98,9 +98,9 @@
   #body-wrap{
     main {
       width: calc(100vw - 250px);
-      height: calc(76vh - 10px);
+      height: calc(77vh - 10px);
       margin-top: 10px;
-      margin-right: 1vw;
+      margin-right: 1.5vw;
       border-radius: 10px;
     }
   }
@@ -115,11 +115,11 @@
     box-shadow: 0px 5px 10px 0px rgba(#000, .5);
 
     article {
-      height: calc(76vh - 14vw - 40px);
+      height: calc(77vh - 13vw - 50px);
       overflow-x: hidden;
       overflow-y: auto;
-      padding: 7vw;
-      margin: 15px 10px;
+      padding: 7vw 7vw 6vw;
+      margin: 20px 15px;
 
       h1 {
         margin-top: 0;
