@@ -2,7 +2,7 @@
  * Created by Leon Li on 14/02/2017.
  */
 $(function() {
-  var topOffset = 0, bottomOffset = 230, prevClientY = 0;
+  var topOffset = 0, bottomOffset = 120, prevClientY = 0;
 
   $(window).on('load', function() {
     initNav();
@@ -42,37 +42,40 @@ $(function() {
     var ascentDiver = $('#diver-ascent')[0];
     var descentDiver = $('#diver-descent')[0];
 
-    topOffset = window.innerHeight * 0.2 + 120;
+    topOffset = window.innerHeight * 0.2 + 180;
 
     if(e.clientY >= topOffset && e.clientY <= (window.innerHeight - bottomOffset)) {
       // Ascending
-      if(e.clientY <= prevClientY) {
-        ascentDiver.style.opacity = 1 - (e.clientY / (window.innerHeight)).toFixed(1);
+      if(e.clientY < prevClientY) {
+        descentDiver.style.opacity = '0';
+        ascentDiver.style.opacity = 1 - e.clientY / window.innerHeight;
         ascentDiver.style.top = e.clientY + 'px';
-        ascentDiver.style.display = 'block';
-        descentDiver.style.display = 'none';
+        ascentDiver.style.height = (1 - e.clientY / window.innerHeight + 0.4) * 120 + 'px';
       }
   
       // Descending
       if(e.clientY > prevClientY) {
-        descentDiver.style.opacity = 1 - (e.clientY / window.innerHeight).toFixed(1);
+        ascentDiver.style.opacity = '0';
+        descentDiver.style.opacity = 1 - e.clientY / window.innerHeight;
         descentDiver.style.top = e.clientY + 'px';
-        ascentDiver.style.display = 'none';
-        descentDiver.style.display = 'block';
+        descentDiver.style.height = (1 - e.clientY / window.innerHeight + 0.4) * 120 + 'px';
       }
     }
 
-    // Ascended through the roof
+    // Ascended beyond the roof
     if(e.clientY < topOffset) {
       ascentDiver.style.top = topOffset + 'px';
       ascentDiver.style.opacity = 1;
     }
 
-    // Descended through the bottom
+    // Descended beyond the bottom
     if(e.clientY > (window.innerHeight - bottomOffset)) {
       descentDiver.style.top = window.innerHeight - bottomOffset + 'px';
     }
 
     prevClientY = e.clientY;
   }
+
+  let audio = document.getElementsByTagName('audio')[0];
+  audio.play();
 })

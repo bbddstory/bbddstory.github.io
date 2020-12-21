@@ -20,11 +20,7 @@
       display: none;
     }
 
-    #diver-ascent {
-      display: none !important;
-    }
-    
-    #diver-descent {
+    #diver-ascent, #diver-descent {
       display: none !important;
     }
     
@@ -62,20 +58,22 @@
     color: #fff;
   }
 
-  #diver-ascent {
-    display: block;
+  #diver-ascent, #diver-descent {
     position: absolute;
-    top: 350px;
-    left: 45px;
+    z-index: 1000;
+    top: 447px;
     height: 120px;
+    margin-top: -60px;
+  }
+
+  #diver-ascent {
+    opacity: 1;
+    left: 45px;
   }
   
   #diver-descent {
-    display: none;
-    position: absolute;
-    top: 350px;
-    left: 35px;
-    height: 120px;
+    opacity: 0;
+    left: 40px;
     transform: rotate(180deg);
   }
 
