@@ -75,7 +75,4 @@ $(function() {
 
     prevClientY = e.clientY;
   }
-
-  let audio = document.getElementsByTagName('audio')[0];
-  audio.play();
 })
