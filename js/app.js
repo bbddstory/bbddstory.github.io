@@ -75,4 +75,7 @@ $(function() {
 
     prevClientY = e.clientY;
   }
+
+  let video = document.getElementsByTagName('video')[0];
+  video.play();
 })
