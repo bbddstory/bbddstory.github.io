@@ -17,12 +17,14 @@ $(function() {
   });
 
   function removeSnow() {
-    $('.marine-snow').on('click', function() {
-      $('.marine-snow-caption p').fadeOut(800, function() {
-        $('.marine-snow').hide();
-        $('.midnight').fadeOut(2000);
-        document.getElementsByTagName('audio')[0].play();
-      });
+    $('.marine-snow').on('click', function(e) {
+      if(e.target.nodeName !== 'I') {
+        $('.marine-snow-caption p').fadeOut(800, function() {
+          $('.marine-snow').hide();
+          $('.midnight').fadeOut(2000);
+          document.getElementsByTagName('audio')[0].play();
+        });
+      }
     })
   }
 
