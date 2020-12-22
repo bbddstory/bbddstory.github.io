@@ -19,10 +19,9 @@ $(function() {
   function removeSnow() {
     $('.marine-snow').on('click', function() {
       $('.marine-snow-caption p').fadeOut(800, function() {
-        var video = document.getElementsByTagName('video')[0];
-        video.play();
         $('.marine-snow').hide();
         $('.midnight').fadeOut(2000);
+        document.getElementsByTagName('audio')[0].play();
       });
     })
   }
