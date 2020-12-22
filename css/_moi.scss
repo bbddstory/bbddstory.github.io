@@ -5,20 +5,40 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #fff;
   border: 6vmin solid #fff;
   border-radius: 3px;
   box-sizing: border-box;
   -webkit-box-shadow: 0px 0px 15px 0px rgba(#000, .5);
   -moz-box-shadow: 0px 0px 15px 0px rgba(#000, .5);
   box-shadow: 0px 0px 15px 0px rgba(#000, .5);
-  cursor: pointer;
-
-  @media only screen and (min-width: 701px) {
-    height: 90vmin;
+  margin-top: -0.1vmin;
+  margin-left: -0.1vmin;
+  
+  img {
+    border-radius: 5px;
+    cursor: pointer;
   }
 
-  @media only screen and (max-width: 700px) {
-    width: 90vw;
+  figcaption {
+    font-family: "Fira Code Light";
+    text-align: center;
+    background-color: #fff;
+    margin-top: 8px;
+  }
+
+  @media only screen and (min-width: 601px) {
+    img {
+      height: 80vmin;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-left: -0.1vmin;
+
+    img {
+      width: 80vw;
+    }
   }
 }
 
