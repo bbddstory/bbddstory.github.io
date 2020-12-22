@@ -8,6 +8,11 @@
 @import './moi';
 
 @media only screen and (max-width: 700px) {
+  .marine-snow-caption {
+    width: 80vw !important;
+    font-size: 1.2rem !important;
+  }
+
   #body-wrap {
     height: 100vh;
     overflow-y: auto !important;
@@ -40,6 +45,125 @@
   #diver-ascent, #diver-descent {
     display: none !important;
   }
+}
+
+.marine-snow {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0;
+  background: radial-gradient(farthest-corner at 40vw 20vh, #000 1%, #00183a 100%);
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+  cursor: pointer;
+
+  $layer1: "";
+  $layer2: "";
+  $layer3: "";
+
+  @for $i from 1 through 300 {
+    $layer1: $layer1 + random(1000) * 0.1vw + " " + random(1000) * 0.1vh + " " + 0 + " " + random(50) * -0.01rem + #f2f2f2;
+    $layer2: $layer2 + random(1000) * 0.1vw + " " + random(1000) * 0.1vh + " " + 0 + " " + random(50) * -0.01rem + #f2f2f2;
+    $layer3: $layer3 + random(1000) * 0.1vw + " " + random(1000) * 0.1vh + " " + 0 + " " + random(50) * -0.01rem + #f2f2f2;
+    @if $i < 500 {
+      $layer1: $layer1 + ",";
+      $layer2: $layer2 + ",";
+      $layer3: $layer3 + ",";
+    }
+  }
+
+  &-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 40vw;
+    color: #f2f2f2;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+
+    a {
+      color: #f2f2f2;
+    }
+  }
+
+  .snow {
+    position: absolute;
+    top: -100vh;
+    border-radius: 50%;
+    opacity: .8;
+    animation-name: snowfall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .layer-1 {
+    width: 7px;
+    height: 7px;
+    filter: blur(1px);
+    box-shadow: #{$layer1};
+    animation-duration: 120s;
+    
+    &.half {
+      animation-delay: -60s;
+    }
+  }
+  .layer-2 {
+    width: 6px;
+    height: 6px;
+    filter: blur(1.5px);
+    box-shadow: #{$layer2};
+    animation-duration: 180s;
+
+    &.half {
+      animation-delay: -90s;
+    }
+  }
+  .layer-3 {
+    width: 4px;
+    height: 4px;
+    filter: blur(2px);
+    box-shadow: #{$layer3};
+    animation-duration: 240s;
+
+    &.half {
+      animation-delay: -120s;
+    }
+  }
+
+  @keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes snowfall {
+    100% {
+      transform: translateY(200vh);
+    }
+  }
+}
+
+.midnight {
+  position: absolute;
+  z-index: 8888;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 1;
 }
 
 .mask {

@@ -5,6 +5,7 @@ $(function() {
   var topOffset = 0, bottomOffset = 120, prevClientY = 0;
 
   $(window).on('load', function() {
+    removeSnow();
     initNav();
     initRouting();
 
@@ -14,6 +15,17 @@ $(function() {
       })
     }
   });
+
+  function removeSnow() {
+    $('.marine-snow').on('click', function() {
+      $('.marine-snow-caption p').fadeOut(800, function() {
+        var video = document.getElementsByTagName('video')[0];
+        video.play();
+        $('.marine-snow').hide();
+        $('.midnight').fadeOut(2000);
+      });
+    })
+  }
 
   function initNav() {
     $('nav a, #nav-mobile a, #motto a').on('click', function(e) {
@@ -77,7 +89,4 @@ $(function() {
 
     prevClientY = e.clientY;
   }
-
-  // let video = document.getElementsByTagName('video')[0];
-  // video.play();
 })
