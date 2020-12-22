@@ -5,7 +5,8 @@
         .gallery {
           img {
             height: auto !important;
-            width: 100% !important;
+            width: calc(100% - 6vw) !important;
+            margin: 1.5vw 3vw !important;
           }
         }
       }
