@@ -100,12 +100,29 @@
         left: 93px;
 
         li {
-          margin-bottom: 30px;
+          display: flex;
+
+          &:hover {
+            span {
+              opacity: 1;
+            }
+
+            span, a {
+              font-weight: bold;
+            }
+          }
 
           span {
             color: #f2f2f2;
             margin-right: 16px;
             opacity: .5;
+            transition: all 0.2s;
+          }
+          
+          a {
+            display: block;
+            width: 100%;
+            padding-bottom: 30px;
           }
         }
       }
@@ -116,10 +133,32 @@
         bottom: 115px;
         font-size: 12px;
 
-        span {
-          color: #f2f2f2;
-          margin-right: 16px;
-          opacity: .5;
+        li {
+          display: flex;
+
+          &:hover {
+            span {
+              opacity: 1;
+            }
+
+            span, a {
+              font-weight: bold;
+            }
+          }
+
+          span {
+            color: #f2f2f2;
+            margin-right: 16px;
+            opacity: .5;
+            padding-top: 30px;
+            transition: all 0.2s;
+          }
+
+          a {
+            display: block;
+            width: 100%;
+            padding-top: 30px;
+          }
         }
       }
 
