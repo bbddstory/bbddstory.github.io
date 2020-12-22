@@ -29,10 +29,7 @@
     <li><a href="files/leon_li_portfolio.pdf"><b>Portfolio</b></a></li>
     <li><a href="https://github.com/bbddstory" target="_blank">GitHub</a></li>
 </ul>
-<div class="separator">
-    <img class="sep-desktop"  src="../images/separator.png">
-    <img class="sep-mobile" src="../images/separator_mobile.png">
-</div>
+<div class="divider"></div>
 <footer>
     <p>
         <sup>*</sup>What's with the name you ask? Isn't it a rather depressing outlook to be a junior developer forever?
@@ -49,18 +46,18 @@
 </footer>
 <script>
     $('#mugshot').on('touchend', function(e) {
-        $('#trio').show();
-        $('.mask').show();
+        $('#trio').fadeIn();
+        $('.mask').fadeIn();
         e.preventDefault();
     });
 
     $('#mugshot').on('click', function() {
-        $('#trio').show();
-        $('.mask').show();
+        $('#trio').fadeIn();
+        $('.mask').fadeIn();
     })
     
     $('#trio img, .mask').on('click', function() {
-        $('#trio').hide();
-        $('.mask').hide();
+        $('#trio').fadeOut();
+        $('.mask').fadeOut();
     })
 </script>
