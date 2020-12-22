@@ -62,6 +62,10 @@
 }
 
 @media only screen and (max-width: 700px) {
+  #trio figcaption {
+    font-size: .8rem;
+  }
+
   #moi-header {
     #mugshot {
       width: 35vw !important;
