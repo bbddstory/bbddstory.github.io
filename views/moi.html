@@ -50,14 +50,17 @@
 <script>
     $('#mugshot').on('touchend', function(e) {
         $('#trio').show();
+        $('.mask').show();
         e.preventDefault();
     });
 
     $('#mugshot').on('click', function() {
         $('#trio').show();
+        $('.mask').show();
     })
     
-    $('#trio img').on('click', function() {
+    $('#trio img, .mask').on('click', function() {
         $('#trio').hide();
+        $('.mask').hide();
     })
 </script>
