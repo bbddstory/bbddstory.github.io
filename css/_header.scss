@@ -46,6 +46,13 @@
   #header {
     height: 90vw !important;
 
+    #mute-audio {
+      right: unset !important;
+      left: 0;
+      font-size: .8rem;
+      color: #f2f2f2 !important;
+    }
+
     .sky-gradient {
       left: 50% !important;
       transform: translateX(-50%);
@@ -147,6 +154,25 @@
   overflow: hidden;
   width: 100vw;
   height: 21vh;
+
+  #mute-audio {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3500;
+    font-family: 'Fira Code Light';
+    color: #000;
+    text-align: right;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
 
   .sky-gradient {
     position: absolute;
@@ -289,5 +315,6 @@
     right: 2vw;
     height: 220px;
     opacity: .5;
+    transition: all .5s;
   }
 }

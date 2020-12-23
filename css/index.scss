@@ -57,7 +57,7 @@
   height: 100vh;
   overflow: hidden;
   opacity: 0;
-  background: radial-gradient(farthest-corner at 40vw 20vh, #000 1%, #00183a 100%);
+  background: radial-gradient(farthest-corner at 30vw 20vh, #000 1%, #00183a 100%);
   animation-name: fadeIn;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -155,17 +155,6 @@
       transform: translateY(200vh);
     }
   }
-}
-
-.midnight {
-  position: absolute;
-  z-index: 8888;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  opacity: 1;
 }
 
 .mask {
