@@ -77,10 +77,14 @@ $(function() {
         e.target.innerHTML = 'MUTE';
         $('audio')[0].play();
         $('#seagulls').css('opacity', .5);
+        $('#skyline').css('height', '50px');
+        $('#canvas-ripple').css('height', '100px');
       } else {
         e.target.innerHTML = 'PLAY';
         $('audio')[0].pause();
         $('#seagulls').css('opacity', .1);
+        $('#skyline').css('height', '100px');
+        $('#canvas-ripple').css('height', 0);
       }
     });
   }
