@@ -68,6 +68,7 @@
           height: 40px !important;
           background: url(/images/scuba_diver_mobile.png) 50% 50% no-repeat !important;
           background-size: contain !important;
+          opacity: .9 !important;
         }
       }
     }
@@ -105,6 +106,7 @@
 #body-wrap {
   main {
     position: relative;
+    z-index: 100;
     background-color: #eee;
     -webkit-box-shadow: 0px 5px 10px 0px rgba(#000, .5);
     -moz-box-shadow: 0px 5px 10px 0px rgba(#000, .5);
@@ -169,6 +171,7 @@
         background: url(/images/scuba_diver.png) 50% 50% no-repeat;
         background-size: contain;
         margin: 60px 0;
+        opacity: .8;
       }
     }
   }

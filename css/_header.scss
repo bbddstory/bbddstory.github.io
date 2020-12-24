@@ -103,7 +103,7 @@
       flex-direction: column;
       width: 100vw;
       text-align: center;
-      font-family: "Fira Code Bold";
+      font-family: 'Fira Code Bold';
       -webkit-text-shadow: 0px 2px 3px rgba(#000, .3);
       -moz-text-shadow: 0px 2px 3px rgba(#000, .3);
       text-shadow: 0px 2px 3px rgba(#000, .3);
@@ -126,7 +126,7 @@
       height: 30vw !important;
     }
     
-    #fish-2, #fish-3 {
+    #fish-2, #dolphin {
       display: none;
     }
     
@@ -135,7 +135,7 @@
       left: 73vw !important;
       height: 17vw !important;
       transform: rotate(-8deg) !important;
-      opacity: .7 !important;
+      opacity: .9 !important;
     }
 
     #seagulls {
@@ -174,6 +174,7 @@
     background: none;
     border: none;
     outline: none;
+    opacity: .8;
     cursor: pointer;
 
     &:hover {
@@ -307,15 +308,14 @@
     left: 27vw;
     height: 25px;
     transform: rotate(-7deg);
-    opacity: .5;
+    opacity: .6;
   }
   
-  #fish-3 {
+  #dolphin {
     z-index: 2900;
-    top: 15vh;
+    top: 16vh;
     left: 40%;
-    height: 30px;
-    transform: rotate(-5deg);
+    height: 20px;
     opacity: .6;
   }
 
@@ -325,7 +325,7 @@
     left: 28vw;
     height: 50px;
     transform: rotate(5deg);
-    opacity: .7;
+    opacity: .8;
   }
 
   #seagulls {

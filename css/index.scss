@@ -88,6 +88,7 @@
     width: 40vw;
     text-align: justify;
     color: #f2f2f2;
+    font-family: 'Fira Code Light';
     font-size: 1.5rem;
     line-height: 1.5;
     animation-name: fadeIn;
@@ -196,12 +197,12 @@
 
   #diver-ascent {
     opacity: 1;
-    left: 45px;
+    left: 50px;
   }
   
   #diver-descent {
     opacity: 0;
-    left: 40px;
+    left: 45px;
     transform: rotate(180deg);
   }
 

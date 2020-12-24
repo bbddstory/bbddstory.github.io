@@ -1,6 +1,17 @@
 @media only screen and (max-width: 700px) {
   #content {
     background: none !important;
+
+    #swordfish, #turtle, #jellyfish {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-height: 610px) {
+  #content {
+    height: 100vh;
+    margin-top: 0;
   }
 }
 
@@ -10,18 +21,40 @@
   display: flex;
   overflow: hidden;
   width: 100vw;
-  font-family: "Fira Code Light";
+  font-family: 'Fira Code Light';
   background: #00aef0; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#00aef0, #004a80); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#00aef0, #004a80); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#00aef0, #004a80); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#00aef0, #004a80); /* Standard syntax */
   margin-top: -1vh;
-}
 
-@media only screen and (max-height: 610px) {
-  #content {
-    height: 100vh;
-    margin-top: 0;
+  #swordfish {
+    position: absolute;
+    z-index: -100;
+    left: -35px;
+    bottom: -150px;
+    height: 500px;
+    opacity: .05;
+  }
+
+  #turtle {
+    display: none;
+    position: absolute;
+    z-index: -100;
+    transform: scaleX(-1);
+    bottom: -60px;
+    left: 110px;
+    height: 120px;
+    opacity: .1;
+  }
+
+  #jellyfish {
+    position: absolute;
+    z-index: -100;
+    bottom: 0;
+    right: -40px;
+    height: 400px;
+    opacity: .1;
   }
 }
