@@ -98,6 +98,9 @@
 
             span, a {
               font-weight: bold;
+              -webkit-text-shadow: 1px 1px 1px rgba(#000, .3);
+              -moz-text-shadow: 1px 1px 1px rgba(#000, .3);
+              text-shadow: 1px 1px 1px rgba(#000, .3);
             }
           }
 
