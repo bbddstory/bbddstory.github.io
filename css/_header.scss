@@ -1,47 +1,3 @@
-@media only screen and (min-width: 1101px) {
-  #header {
-    .rainbow {
-      .base-ring {
-        width: 60vw;
-        height: 60vw;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 901px) and (max-width: 1100px) {
-  #header {
-    .rainbow {
-      .base-ring {
-        width: 65vw;
-        height: 65vw;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 701px) and (max-width: 900px) {
-  #header {
-    .rainbow {
-      .base-ring {
-        width: 75vw;
-        height: 75vw;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 701px) and (max-width: 700px) {
-  #header {
-    .rainbow {
-      .base-ring {
-        width: 85vw;
-        height: 85vw;
-      }
-    }
-  }
-}
-
 @media only screen and (max-width: 700px) {
   #header {
     height: 90vw !important;
@@ -49,8 +5,6 @@
     #mute-audio {
       right: unset !important;
       left: 0;
-      // left: 50%;
-      // transform: translateX(-50%);
       font-size: .8rem;
       color: #f2f2f2 !important;
     }
@@ -69,12 +23,9 @@
     }
 
     .rainbow {
-      top: 18vw !important;
-
-      .base-ring {
-        width: 60vw;
-        height: 60vw;
-      }
+      top: 40vw !important;
+      width: 55vw !important;
+      height: 55vw !important;
     }
 
     #cloud {
@@ -215,62 +166,31 @@
     background: linear-gradient(#1c97e3, #f2f2f2); /* Standard syntax */ // #87CEEB
   }
 
-  .rainbow {
+  .rainbow-mask {
     position: absolute;
-    top: 1vh;
-    left: 50%;
-    height: 50vw;
-    overflow: hidden;
-    transform: translateX(-50%);
+    top: 0;
     z-index: 1500;
-    
-    .base-ring {
-      border-width: 0.625em;
-      border-style: solid;
-      border-top-left-radius: 50%;
-      border-top-right-radius: 50%;
-    }
-    
-    .outer-ring {
-      display: table;
-      border-width: 0.625em;
-      border-style: solid;
-      border-top-left-radius: 50%;
-      border-top-right-radius: 50%;
-    }
-    
-    .purple-ring {
-      border-width: 0.5em;
-      border-color: #b34e9a;
-    }
+    overflow: hidden;
+    width: 100%;
+    height: 80%;
 
-    .blue-ring {
-      border-color: #378fce;
-    }
-
-    .cyan-ring {
-      border-width: 0.438em;
-      border-color: #86d3e7;
-    }
-
-    .green-ring {
-      border-width: 0.375em;
-      border-color: #a8ce43;
-    }
-
-    .yellow-ring {
-      border-width: 0.813em;
-      border-color: #efd90a;
-    }
-
-    .orange-ring {
-      border-width: 0.813em;
-      border-color: #f68b21;
-    }
-
-    .red-ring {
-      border-width: 1.125em;
-      border-color: #ee1d23;
+    .rainbow {
+      position: absolute;
+      top: calc(1vh + 80px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 75vw;
+      height: 75vw;
+      border-radius: 50%;
+      background: transparent;
+      box-shadow:
+        0 0 0 14px #b34e9a,
+        0 0 0 26px #378fce,
+        0 0 0 30px #86d3e7,
+        0 0 0 41px #a8ce43,
+        0 0 0 54px #efd90a,
+        0 0 0 63px #f68b21,
+        0 0 0 80px #ee1d23;
     }
   }
 

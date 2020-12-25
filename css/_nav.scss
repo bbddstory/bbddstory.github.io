@@ -4,54 +4,6 @@
     width: 250px;
     height: 80vh;
 
-    .rainbow {
-      .base-ring {
-        width: 15vw;
-        height: 15vw;
-      }
-
-      .outer-ring {
-        display: table;
-        border: 20px solid #b34e9a;
-        border-radius: 50%;
-      }        
-
-      .purple-ring {
-        border: 20px solid #b34e9a;
-        border-radius: 50%;
-      }
-
-      .blue-ring {
-        border: 20px solid #378fce;
-        border-radius: 50%;
-      }
-
-      .cyan-ring {
-        border: 20px solid #86d3e7;
-        border-radius: 50%;
-      }
-
-      .green-ring {
-        border: 20px solid #a8ce43;
-        border-radius: 50%;
-      }
-
-      .yellow-ring {
-        border: 20px solid #efd90a;
-        border-radius: 50%;
-      }
-
-      .orange-ring {
-        border: 20px solid #f68b21;
-        border-radius: 50%;
-      }
-
-      .red-ring {
-        border: 20px solid #ee1d23;
-        border-radius: 50%;
-      }
-    }
-
     #nav-el-wrap {
       position: absolute;
       top: 0;
