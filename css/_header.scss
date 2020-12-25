@@ -7,6 +7,9 @@
       left: 0;
       font-size: .8rem;
       color: #f2f2f2 !important;
+      background-image: url(/images/starfish_white.png) !important;
+      padding-left: 28px !important;
+      margin: 5px !important;
     }
 
     #skyline {
@@ -115,16 +118,22 @@
   #mute-audio {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 3500;
+    width: fit-content;
+    text-align: left;
     font-family: 'Fira Code Light';
     color: #000;
     letter-spacing: -.5px;
     word-spacing: -2px;
-    padding: 10px 15px;
+    padding: 5px 10px 5px 32px;
     background: none;
+    background-image: url(/images/starfish.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     border: none;
     outline: none;
+    margin: 10px;
     opacity: .8;
     cursor: pointer;
 
