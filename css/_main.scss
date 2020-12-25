@@ -3,10 +3,14 @@
     main {
       article {
         .gallery {
-          img {
-            height: auto !important;
+          div {
             width: calc(100% - 6vw) !important;
             margin: 1.5vw 3vw !important;
+
+            img {
+              width: 100%;
+              height: auto !important;
+            }
           }
         }
       }
@@ -105,7 +109,7 @@
   main {
     position: relative;
     z-index: 100;
-    background-color: #eee;
+    background-color: #ddd;
     -webkit-box-shadow: 0px 5px 10px 0px rgba(#000, .5);
     -moz-box-shadow: 0px 5px 10px 0px rgba(#000, .5);
     box-shadow: 0px 5px 10px 0px rgba(#000, .5);
@@ -152,15 +156,52 @@
       }
 
       .gallery {
-        img {
-          height: 268px;
-          margin-bottom: 5px;
-          object-fit: cover;
-          border: 10px solid #fff;
-          box-sizing: border-box;
-          -webkit-box-shadow: 0px 3px 8px 0px rgba(#000, .3);
-          -moz-box-shadow: 0px 3px 8px 0px rgba(#000, .3);
-          box-shadow: 0px 3px 8px 0px rgba(#000, .3);
+        &>div {
+          display: inline-block;
+          position: relative;
+          width: fit-content;
+          height: fit-content;
+          margin-bottom: 15px;
+
+          &::before, &::after {
+            content: "";
+            position: absolute;
+            top: 80%;
+            bottom: 18px;
+            left: 10px;
+            z-index: -1;
+            width: 50%;
+            // max-width:300px;
+            background: #000;
+            -webkit-box-shadow: 0 15px 10px rgba(#000, .5);
+            -moz-box-shadow: 0 15px 10px rgba(#000, .5);
+            box-shadow: 0 15px 10px rgba(#000, .5);
+            -webkit-transform: rotate(-3deg);
+            -moz-transform: rotate(-3deg);
+            -o-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+          }
+          &::after {
+            -webkit-transform: rotate(3deg);
+            -moz-transform: rotate(3deg);
+            -o-transform: rotate(3deg);
+            -ms-transform: rotate(3deg);
+            transform: rotate(3deg);
+            right: 10px;
+            left: auto;
+          }
+
+          img {
+            border: 10px solid #fff;
+            object-fit: cover;
+            height: 268px;
+            box-sizing: border-box;
+            // margin-bottom: 10px;
+            // -webkit-box-shadow: 0px 3px 8px 0px rgba(#000, .3);
+            // -moz-box-shadow: 0px 3px 8px 0px rgba(#000, .3);
+            // box-shadow: 0px 3px 8px 0px rgba(#000, .3);
+          }
         }
       }
 
