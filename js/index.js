@@ -74,13 +74,13 @@ $(function() {
   function muteAudio() {
     $('#mute-audio').on('click', function(e) {
       if($('audio')[0].paused) {
-        e.target.innerHTML = 'AUDIO OFF';
+        e.target.innerHTML = 'AUDIO ON';
         $('audio')[0].play();
         $('#seagulls').css('opacity', .5);
         $('#skyline').css('height', '50px');
         $('#canvas-ripple').css('height', '100px');
       } else {
-        e.target.innerHTML = 'AUDIO ON';
+        e.target.innerHTML = 'AUDIO OFF';
         $('audio')[0].pause();
         $('#seagulls').css('opacity', .1);
         $('#skyline').css('height', '100px');
