@@ -27,18 +27,6 @@
       background-color: transparent !important;
       background: url(/images/diver_ascent_left.png) 106% 8vw no-repeat;
 
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   top: 0;
-      //   right: 0;
-      //   width: 100vw;
-      //   height: 100vh;
-      //   background: url(/images/diver_ascent_left.png) 100% 8vw no-repeat;
-      //   background-size: 20vw;
-      //   opacity: 0.2;
-      // }
-
       #guideline-mobile-up {
         position: absolute;
         top: 0;
@@ -55,10 +43,19 @@
 
       article {
         height: 100% !important;
+        font-size: 1.1rem !important;
+        color: #fff;
         background: url(/images/diver_descent_down.png) -11vw 100% no-repeat;
         padding: calc(7vw + 10px) !important;
         margin: 0 !important;
-        color: #fff;
+
+        header {
+          margin-bottom: 0 !important;
+
+          &>div {
+            display: none !important;
+          }
+        }
 
         p {
           line-height: 1.8 !important;
@@ -66,6 +63,10 @@
 
         a {
           color: #f2f2f2 !important;
+        }
+
+        footer {
+          font-size: 1rem !important;
         }
 
         .divider {
@@ -97,7 +98,7 @@
   #body-wrap{
     main {
       width: calc(100vw - 250px);
-      height: calc(77vh - 10px);
+      height: calc(80vh - 35px);
       margin-top: 10px;
       margin-right: 1.5vw;
       border-radius: 10px;
@@ -109,16 +110,18 @@
   main {
     position: relative;
     z-index: 100;
+    overflow: hidden;
     background-color: #ddd;
     -webkit-box-shadow: 0px 5px 10px 0px rgba(#000, .5);
     -moz-box-shadow: 0px 5px 10px 0px rgba(#000, .5);
     box-shadow: 0px 5px 10px 0px rgba(#000, .5);
 
     article {
-      height: calc(77vh - 13vw - 50px);
+      height: calc(100% - 9vw - 40px);
       overflow-x: hidden;
       overflow-y: auto;
-      padding: 7vw 7vw 6vw;
+      font-size: 1.2rem;
+      padding: 5vw 5vw 4vw;
       margin: 20px 15px;
 
       h1 {
@@ -150,8 +153,8 @@
       }
 
       footer {
+        font-size: 1.1rem;
         line-height: 2;
-        font-size: 14px;
         text-align: justify;
       }
 
