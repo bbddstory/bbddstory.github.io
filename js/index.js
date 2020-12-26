@@ -77,13 +77,13 @@ $(function() {
         e.target.innerHTML = 'AUDIO ON';
         $('audio')[0].play();
         $('#seagulls').css('opacity', .5);
-        $('#skyline').css('height', '50px');
+        // $('#skyline').css('height', '50px');
         $('#canvas-ripple').css('height', '100px');
       } else {
         e.target.innerHTML = 'AUDIO OFF';
         $('audio')[0].pause();
         $('#seagulls').css('opacity', .1);
-        $('#skyline').css('height', '100px');
+        // $('#skyline').css('height', '100px');
         $('#canvas-ripple').css('height', 0);
       }
     });

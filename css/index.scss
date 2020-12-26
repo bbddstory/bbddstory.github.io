@@ -48,6 +48,18 @@
   }
 }
 
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes snowfall {
+  100% {
+    transform: translateY(200vh);
+  }
+}
+
 .marine-snow {
   position: absolute;
   z-index: 9999;
@@ -142,18 +154,6 @@
 
     &.half {
       animation-delay: -120s;
-    }
-  }
-
-  @keyframes fadeIn {
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes snowfall {
-    100% {
-      transform: translateY(200vh);
     }
   }
 }
