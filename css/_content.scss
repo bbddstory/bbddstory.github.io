@@ -10,8 +10,8 @@
 
 @media only screen and (max-height: 610px) {
   #content {
-    height: 100vh;
-    margin-top: 0;
+    height: 100vh !important;
+    margin-top: 0 !important;
   }
 }
 

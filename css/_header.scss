@@ -120,7 +120,6 @@
     top: 0;
     left: 0;
     z-index: 3500;
-    width: fit-content;
     text-align: left;
     font-family: 'Fira Code Light';
     color: #000;
@@ -136,10 +135,6 @@
     margin: 10px;
     opacity: .8;
     cursor: pointer;
-
-    &:hover {
-      font-weight: bold;
-    }
   }
 
   #skyline {
