@@ -63,7 +63,7 @@ $(function() {
     $('.marine-snow').on('click', function(e) {
       if(e.target.nodeName !== 'I') {
         $('.marine-snow-caption p').fadeOut(800, function() {
-          $('.marine-snow').hide();
+          $('.marine-snow').remove();
           $('.midnight').fadeOut(2000);
           $('audio')[0].play();
         });
