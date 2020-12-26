@@ -106,7 +106,17 @@ $(function() {
     }
   }
 
+  function isIpad() {
+    if(navigator.platform === 'iPad' && navigator.maxTouchPoints >= 5) {
+      $('.marine-snow').remove();
+      $('.midnight').remove();
+      $('#diver-ascent').remove();
+      $('#diver-descent').remove();
+    }
+  }
+
   $(window).on('load', function() {
+    isIpad();
     checkMobile();
     removeSnow();
     muteAudio();
