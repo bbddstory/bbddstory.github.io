@@ -112,6 +112,9 @@ $(function() {
       $('.midnight').remove();
       $('#diver-ascent').remove();
       $('#diver-descent').remove();
+      $('#mute-audio')[0].innerHTML = 'AUDIO OFF';
+    } else {
+      $('.marine-snow').css('display', 'block');
     }
   }
 
