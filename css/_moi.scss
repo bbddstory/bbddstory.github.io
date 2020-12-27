@@ -48,18 +48,18 @@
 
   @media only screen and (orientation: landscape) {
     img {
-      height: 80vh;
+      height: 70vh;
     }
   }
 
   @media only screen and (orientation: portrait) {
     img {
-      width: 80vw;
+      width: 75vw;
     }
   }
 }
 
-@media only screen and (min-width: 701px) and (max-width: 900px) {
+@media only screen and (min-width: 769px) and (max-width: 900px) {
   #moi-header {
     h1 {
       font-size: 3.5vw !important;
@@ -71,7 +71,7 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   #trio figcaption {
     font-size: .8rem;
   }
