@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="h_UJGKgFkCd6PHtThOsETygujb2g9q5ku4hR0n1i2K0" />
+    <meta name="google-site-verification" content="h_UJGKgFkCd6PHtThOsETygujb2g9q5ku4hR0n1i2K0">
     <meta name="description" content="Leon's personal website on GitHub">
     <meta name="keywords" content="Leon, personal, website, GitHub, PhantomZone, Forever, Junior, Dev">
     <meta name="author" content="Leon Li">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>Forever Junior Dev</title>
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/jquery-3.6.1.min.js"></script>
+    <script defer src="js/paper-full-0.12.15.min.js"></script>
+    <script defer src="js/index.js"></script>
 </head>
 <body>
     <audio preload loop style="display: none;">
@@ -42,7 +45,7 @@
     <div class="midnight" style="position:absolute;z-index:8888;top:0;left:0;width:100vw;height:100vh;background-color:#000d1f;"></div>
     <figure id="trio">
         <img src="images/trio.jpg" alt="A Trio of Three">
-        <figcaption>Me with friends and a tan at <a href="https://goo.gl/maps/GUSLV1DvbVrsRkiy6" target="_blank" rel="noopener">Panglao</a></figcaption>
+        <figcaption>Me with a tan and friends at <a href="https://goo.gl/maps/GUSLV1DvbVrsRkiy6" target="_blank" rel="noopener">Panglao</a></figcaption>
     </figure>
     <div class="mask"></div>
     <div id="body-wrap">
@@ -132,11 +135,11 @@
         mass: 2,
         count: 0
     };
+
     values.invMass = 1 / values.mass;
-    
+
     var path, springs;
     var size = view.size * [1.2, 1];
-    
     var Spring = function(a, b, strength, restLength) {
         this.a = a;
         this.b = b;
@@ -144,27 +147,29 @@
         this.strength = strength ? strength : 0.55;
         this.mamb = values.invMass * values.invMass;
     };
-    
+
     Spring.prototype.update = function() {
         var delta = this.b - this.a;
         var dist = delta.length;
-        var normDistStrength = (dist - this.restLength) /
-                (dist * this.mamb) * this.strength;
+        var normDistStrength = (dist - this.restLength) / (dist * this.mamb) * this.strength;
+
         delta.y *= normDistStrength * values.invMass * 0.2;
         if (!this.a.fixed)
             this.a.y += delta.y;
         if (!this.b.fixed)
             this.b.y -= delta.y;
     };
-    
+
     function createPath(strength) {
         var path = new Path({
             fillColor: '#00aef0'
         });
+
         springs = [];
         for (var i = 0; i <= values.amount; i++) {
             var segment = path.add(new Point(i / values.amount, 0.5) * size);
             var point = segment.point;
+
             if (i == 0 || i == values.amount)
                 point.y += size.height;
             point.px = point.x;
@@ -177,23 +182,25 @@
             }
         }
         path.position.x -= size.width / 4;
+
         return path;
     }
-    
+
     function onResize() {
         if (path)
             path.remove();
         size = view.bounds.size * [2, 1];
         path = createPath(0.1);
     }
-    
+
     function onMouseMove(event) {
         var location = path.getNearestLocation(event.point);
         var segment = location.segment;
         var point = segment.point;
-    
+
         if (!point.fixed && location.distance < size.height / 4) {
             var y = event.point.y;
+
             point.y += (y - point.y) / 6;
             if (segment.previous && !segment.previous.fixed) {
                 var previous = segment.previous.point;
@@ -205,26 +212,27 @@
             }
         }
     }
-    
+
     function onFrame(event) {
         updateWave(path);
     }
-    
+
     function updateWave(path) {
         var force = 1 - values.friction * values.timeStep * values.timeStep;
+
         for (var i = 0, l = path.segments.length; i < l; i++) {
             var point = path.segments[i].point;
             var dy = (point.y - point.py) * force;
+
             point.py = point.y;
             point.y = Math.max(point.y + dy, 0);
         }
-    
         for (var j = 0, l = springs.length; j < l; j++) {
             springs[j].update();
         }
         path.smooth({ type: 'continuous' });
     }
-    
+
     /*function onKeyDown(event) {
         if (event.key == 'space') {
             path.fullySelected = !path.fullySelected;
@@ -232,8 +240,5 @@
         }
     }*/
     </script>
-    <script src="js/paper-full.min.js"></script>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/index.js"></script>
 </body>
 </html>
